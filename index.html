@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chen Wanru | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;
+      background: radial-gradient(circle at top, #1b2238 0, #05060b 55%, #020308 100%);
+      color: #f5f5ff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #a78bfa; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    /* subtle parallax background */
+    .bg-orbit {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(124,58,237,0.18) 0, transparent 55%),
+        radial-gradient(circle at 80% 0%, rgba(56,189,248,0.18) 0, transparent 55%),
+        radial-gradient(circle at 50% 100%, rgba(236,72,153,0.16) 0, transparent 60%);
+      mix-blend-mode: screen;
+      opacity: 0.7;
+      z-index: -2;
+    }
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      background-image: linear-gradient(rgba(148,163,184,0.12) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(148,163,184,0.12) 1px, transparent 1px);
+      background-size: 48px 48px;
+      opacity: 0.18;
+      z-index: -3;
+    }
+
+    /* glass card */
+    .glass {
+      background: rgba(15,23,42,0.72);
+      border-radius: 18px;
+      border: 1px solid rgba(148,163,184,0.25);
+      box-shadow:
+        0 18px 45px rgba(15,23,42,0.85),
+        0 0 24px rgba(129,140,248,0.35);
+      backdrop-filter: blur(18px) saturate(130%);
+      -webkit-backdrop-filter: blur(18px) saturate(130%);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 4fr);
+      gap: 28px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 840px) {
+      header {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+    .hero-title {
+      font-size: 32px;
+      font-weight: 650;
+      letter-spacing: 0.04em;
+    }
+    .hero-sub {
+      margin-top: 8px;
+      font-size: 15px;
+      color: #cbd5f5;
+    }
+    .hero-meta {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #9ca3c7;
+    }
+
+    .hero-about {
+      padding: 18px 20px;
+      display: grid;
+      gap: 10px;
+    }
+    .hero-about-item-title {
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+    }
+    .hero-about-item-cn {
+      font-size: 13px;
+      color: #e5e7ff;
+      margin-top: 2px;
+    }
+    .hero-about-item-desc {
+      font-size: 12px;
+      color: #9fa8d8;
+      margin-top: 4px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .section-tagline {
+      font-size: 12px;
+      color: #9ca3c7;
+    }
+    .section-line {
+      height: 1px;
+      background: linear-gradient(to right, rgba(148,163,184,0.6), transparent);
+      margin-top: 6px;
+    }
+
+    .edu-grid {
+      display: grid;
+      gap: 16px;
+    }
+    @media (min-width: 780px) {
+      .edu-grid {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      }
+    }
+    .card {
+      padding: 18px 18px 16px;
+      border-radius: 16px;
+      background: rgba(15,23,42,0.78);
+      border: 1px solid rgba(148,163,184,0.28);
+      position: relative;
+      overflow: hidden;
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background: radial-gradient(circle at 0 0, rgba(167,139,250,0.18), transparent 60%);
+      opacity: 0;
+      transition: opacity 220ms ease;
+      pointer-events: none;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(196,181,253,0.6);
+      box-shadow:
+        0 16px 40px rgba(15,23,42,0.9),
+        0 0 32px rgba(167,139,250,0.55);
+    }
+    .card:hover::before { opacity: 1; }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .card-meta {
+      font-size: 12px;
+      color: #9ca3c7;
+      margin-bottom: 8px;
+    }
+    .card-body {
+      font-size: 13px;
+      color: #e5e7ff;
+    }
+    .card-body ul {
+      margin-top: 6px;
+      padding-left: 18px;
+    }
+    .card-body li {
+      margin-bottom: 4px;
+    }
+
+    .two-col {
+      display: grid;
+      gap: 18px;
+    }
+    @media (min-width: 840px) {
+      .two-col {
+        grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+      }
+    }
+
+    .media-card {
+      display: grid;
+      grid-template-columns: 120px minmax(0,1fr);
+      gap: 12px;
+      align-items: start;
+    }
+    @media (max-width: 640px) {
+      .media-card {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+    .media-thumb {
+      width: 100%;
+      padding-top: 66%;
+      border-radius: 12px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 1px solid rgba(148,163,184,0.4);
+      box-shadow: 0 10px 25px rgba(15,23,42,0.9);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(129,140,248,0.7);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #c7d2ff;
+      margin-top: 4px;
+    }
+
+    footer {
+      margin-top: 32px;
+      font-size: 11px;
+      color: #9ca3c7;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-orbit"></div>
+
+  <div class="page">
+    <!-- HERO -->
+    <header>
+      <div>
+        <div class="hero-title">Chen Wanru 陈婉如</div>
+        <p class="hero-sub">
+          Content, new media and short-form storytelling across films, series, exhibitions and social feeds.
+        </p>
+        <p class="hero-meta">
+          Based in Beijing / Hong Kong · Open to opportunities in content, short drama and new media operation.
+        </p>
+      </div>
+      <div class="glass hero-about">
+        <div>
+          <div class="hero-about-item-title">Story is my language</div>
+          <div class="hero-about-item-cn">故事是我的语言</div>
+          <p class="hero-about-item-desc">
+            从短片、竖屏短剧到文化短视频，我习惯用故事连接人物与情绪，而不只是完成“任务内容”。
+          </p>
+        </div>
+        <div>
+          <div class="hero-about-item-title">Data-aware creator</div>
+          <div class="hero-about-item-cn">用数据修剪内容</div>
+          <p class="hero-about-item-desc">
+            通过播放量、完播率、互动数据来检验内容方向，在个人账号和项目中反复调整选题与节奏。
+          </p>
+        </div>
+        <div>
+          <div class="hero-about-item-title">Always experimenting</div>
+          <div class="hero-about-item-cn">持续做小实验</div>
+          <p class="hero-about-item-desc">
+            用 AI、插件和小项目解决实际痛点，从自动填表工具到展览装置，在实验里找到新路径。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- EDUCATION -->
+    <section>
+      <div class="section-head">
+        <div>
+          <div class="section-title">Education &amp; Research</div>
+          <div class="section-tagline">教育与研究</div>
+          <div class="section-line"></div>
+        </div>
+      </div>
+      <div class="edu-grid">
+        <div class="card">
+          <div class="card-title">Beijing Film Academy｜广播电视编导</div>
+          <div class="card-meta">B.A. in Broadcasting &amp; TV Editing · 2021 – 2025</div>
+          <div class="card-body">
+            <ul>
+              <li>GPA 88.35 / 100（专业前 20%），系统学习剪辑、声音制作、短视频策划与创作等核心课程。</li>
+              <li>多部学生短片与文化短视频作品在影展及校级平台放映与传播。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">City University of Hong Kong｜Creative Media</div>
+          <div class="card-meta">M.A. in Creative Media (Offer) · 2025 – 2026</div>
+          <div class="card-body">
+            <ul>
+              <li>课程方向涵盖 AI、元宇宙与区块链理论、全球媒体政策、社交媒体研究等前沿议题。</li>
+              <li>雅思 7.5（口语 6.5），能够以英文进行学术写作与跨文化沟通。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:16px;">
+        <div class="card">
+          <div class="card-title">Research｜The Study about the Impact of Douyin on Youth Culture and Consumption Behavior</div>
+          <div class="card-meta">Independent paper · 4,000-word English academic essay</div>
+          <div class="card-body">
+            <ul>
+              <li>从算法推荐、短视频内容形态与用户参与三方面，分析抖音如何重塑青年文化认同与消费决策。</li>
+              <li>结合问卷与案例分析，提炼出“情绪共鸣–社会比较–购买冲动”的内容影响路径。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT WORKS -->
+    <section>
+      <div class="section-head">
+        <div>
+          <div class="section-title">Content Works</div>
+          <div class="section-tagline">内容作品：Films &amp; Exhibitions</div>
+          <div class="section-line"></div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <!-- FILMS -->
+        <div class="card">
+          <div class="card-title">Films｜短片与短剧</div>
+          <div class="card-body">
+            <div class="media-card" style="margin-bottom:12px;">
+              <div class="media-thumb" style="background-image:url('images/feature-short-on-the-eve.jpg');"></div>
+              <div>
+                <div class="pill">Graduation Film</div>
+                <div class="card-title" style="margin-top:6px;">《在春天来临之前》 On the Eve of Spring</div>
+                <div class="card-meta">Director / Writer / Editor</div>
+                <p class="card-body">
+                  以一段青春期告别仪式为线索，围绕“压抑与释放”的情绪张力构建故事，完成从创作到拍摄、后期的全流程实践。
+                </p>
+              </div>
+            </div>
+
+            <div class="media-card" style="margin-bottom:12px;">
+              <div class="media-thumb" style="background-image:url('images/shortfilm-bansummer.jpg');"></div>
+              <div>
+                <div class="pill">Student Short</div>
+                <div class="card-title" style="margin-top:6px;">X 短片（半夏的纪念入围）</div>
+                <div class="card-meta">Writer / Director</div>
+                <p class="card-body">
+                  学生时期短片作品，入围第十八届“半夏的纪念”北京（国际）大学生影像展主竞赛单元，探索成长与自我和解主题。
+                </p>
+              </div>
+            </div>
+
+            <div class="media-card" style="margin-bottom:12px;">
+              <div class="media-thumb" style="background-image:url('images/vertical-drama-kaiji.jpg');"></div>
+              <div>
+                <div class="pill">Vertical Series</div>
+                <div class="card-title" style="margin-top:6px;">竖屏短剧《开机！学院派》</div>
+                <div class="card-meta">Editor / DMT · 2022 – 2023</div>
+                <p class="card-body">
+                  参与竖屏短剧全周期制作，负责正片剪辑、转码合板及素材备份管理，作品于抖音平台播出。
+                </p>
+              </div>
+            </div>
+
+            <div class="media-card">
+              <div class="media-thumb" style="background-image:url('images/culture-video-xiyun.jpg');"></div>
+              <div>
+                <div class="pill">Culture Video</div>
+                <div class="card-title" style="margin-top:6px;">文化短视频《戏韵》</div>
+                <div class="card-meta">Editor</div>
+                <p class="card-body">
+                  独立完成青衣组视频剪辑，通过影像语言呈现传统戏曲身段与情绪节奏，作品入围“读懂中国·新青年看中国”系列活动。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXHIBITIONS -->
+        <div class="card">
+          <div class="card-title">Exhibitions &amp; Installations｜展览与装置</div>
+          <div class="card-body">
+            <div class="media-card" style="margin-bottom:12px;">
+              <div class="media-thumb" style="background-image:url('images/exhibit-buddha.jpg');"></div>
+              <div>
+                <div class="pill">Group Exhibition</div>
+                <div class="card-title" style="margin-top:6px;">Aquamarine Project（佛教主题展）</div>
+                <div class="card-meta">Concept &amp; Space Storytelling</div>
+                <p class="card-body">
+                  围绕佛教与当代情绪体验策划小组展览，从概念发想到展位布置，设计观众在现场的情绪路径与互动点。
+                </p>
+              </div>
+            </div>
+
+            <div class="media-card" style="margin-bottom:12px;">
+              <div class="media-thumb" style="background-image:url('images/exhibit-ai-artifact.jpg');"></div>
+              <div>
+                <div class="pill">Visual Essay</div>
+                <div class="card-title" style="margin-top:6px;">AI Artifact Zine</div>
+                <div class="card-meta">Writing &amp; Visual Layout</div>
+                <p class="card-body">
+                  以小册子形式完成一份关于 AI 与日常媒介体验的 visual essay，结合文字、图像与设计，呈现媒介如何折射情绪。
+                </p>
+              </div>
+            </div>
+
+            <div class="media-card" style="margin-bottom:12px;">
+              <div class="media-thumb" style="background-image:url('images/exhibit-roblox-vr.jpg');"></div>
+              <div>
+                <div class="pill">Interactive / VR</div>
+                <div class="card-title" style="margin-top:6px;">Roblox Metaverse Game</div>
+                <div class="card-meta">World &amp; Experience Design</div>
+                <p class="card-body">
+                  在 Roblox 中搭建以“元宇宙体验”为主题的 VR 小游戏，参与世界观设定、关卡流程与玩家路径设计。
+                </p>
+              </div>
+            </div>
+
+            <div class="media-card">
+              <div class="media-thumb" style="background-image:url('images/exhibit-lottery-anxiety.jpg');"></div>
+              <div>
+                <div class="pill">Exhibition Booth</div>
+                <div class="card-title" style="margin-top:6px;">The Prism of Being：Lottery &amp; Anxiety</div>
+                <div class="card-meta">Concept &amp; Installation</div>
+                <p class="card-body">
+                  在以“媒体与情绪”为主题的大展中，以“彩票与焦虑”为切入口，设计摊位装置与互动贴纸，收集观众情绪并可视化呈现。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW MEDIA OPERATION -->
+    <section>
+      <div class="section-head">
+        <div>
+          <div class="section-title">New Media Operation</div>
+          <div class="section-tagline">新媒体运营</div>
+          <div class="section-line"></div>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-title">Travel Account on Xiaohongshu</div>
+          <div class="card-meta">Company account · 2023</div>
+          <div class="card-body">
+            <ul>
+              <li>从 0 搭建旅行类短视频账号，负责选题规划、剪辑包装与多平台分发。</li>
+              <li>同步运营图文内容，整体阅读量涨幅约 100%，账号粉丝量提升约 300%。</li>
+              <li>通过评论区互动与私信维护，沉淀高意向用户并引导至私域完成预订转化。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Campus Official Accounts</div>
+          <div class="card-meta">“青春北影”“BFAer”等 · 2022 – 2023</div>
+          <div class="card-body">
+            <ul>
+              <li>负责校级官方账号推文撰写、视觉排版及相关短视频剪辑，日均推送触达师生约 2 万人次。</li>
+              <li>参与电影节、学术典礼等十余场校园活动的宣发与现场内容采集，保障信息高效触达。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:16px;">
+        <div class="card">
+          <div class="card-title">Personal Douyin Account</div>
+          <div class="card-meta">泛娱乐营销号 · 2023 – 2024</div>
+          <div class="card-body">
+            <ul>
+              <li>从 0 设计账号定位与 IP 形象，4 个月内发布短视频 177 条。</li>
+              <li>围绕“热点话题 + 宠物/娱乐”内容模型创作，54 条视频破万播放，最高单条播放量超 100 万，打造 3 条万赞级视频。</li>
+              <li>策划栏目“兔兔聊八卦”等内容尝试，根据播放量与互动反馈复盘调整选题方向。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS & ON-SITE PRACTICE -->
+    <section>
+      <div class="section-head">
+        <div>
+          <div class="section-title">Events &amp; On-site Practice</div>
+          <div class="section-tagline">活动与现场实践</div>
+          <div class="section-line"></div>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="card-title">Overseas Short Drama Operation</div>
+          <div class="card-meta">出海短剧商务运营 · Beijing Micoworld · 2024/11 – 2025/03</div>
+          <div class="card-body">
+            <ul>
+              <li>独立执行库内英语、日语、西语等多语种剧集的内容评级与标签标记，参与搭建 500+ 部短剧内容库。</li>
+              <li>对接 20+ 翻译机构合作，参与交付质量评估并引入 2 家稳定合作伙伴，配合校企兼职译者完成译本生产与质检。</li>
+              <li>通过对剧情节奏、题材类型与基础数据的观察，协助筛选高潜剧目，为后续宣发与投放提供参考清单。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Integrated Communication Projects</div>
+          <div class="card-meta">PR Project Assistant · Ogilvy Shanghai · 2024/07 – 2024/08</div>
+          <div class="card-body">
+            <ul>
+              <li>参与头部品牌整合传播项目，根据 brief 独立构思并产出多条核心传播故事创意。</li>
+              <li>协助设计线上营销活动基本框架，与团队共同完成执行方案，兼顾品牌调性与用户体验。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:16px;">
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">Film Festivals &amp; Public Events</div>
+            <div class="card-meta">Beijing International Film Festival, Youth Public Film Festival etc.</div>
+            <div class="card-body">
+              <ul>
+                <li>在第十三届北京国际电影节 REELFOCUS 真实影像计划中担任优秀志愿者，支持展映及观众服务。</li>
+                <li>担任北京青少年公益电影节指导教师，指导学生完成“北京中轴线申遗”主题短片剧本创作与现场拍摄。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">On-set Collaboration</div>
+            <div class="card-meta">Student film crews</div>
+            <div class="card-body">
+              <ul>
+                <li>参与多部同学短片剧组工作，包括场记与现场协作，在实践中理解片场节奏与部门间配合。</li>
+                <li>在 S 级综艺《桃花坞 3》等节目后期交播中，支持时间线整合与资产管理，确保版本可追溯与交付准确。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATIVE LAB -->
+    <section>
+      <div class="section-head">
+        <div>
+          <div class="section-title">Creative Lab</div>
+          <div class="section-tagline">创意实验室</div>
+          <div class="section-line"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="media-card">
+          <div class="media-thumb" style="background-image:url('images/lab-auto-form.jpg');"></div>
+          <div>
+            <div class="pill">Tool Experiment</div>
+            <div class="card-title" style="margin-top:6px;">Job Application Auto-fill Helper</div>
+            <div class="card-meta">AI-assisted browser script</div>
+            <p class="card-body">
+              在求职过程中发现反复填写网申表单极其耗时，尝试自学前端基础并借助 AI，编写浏览器端自动填表脚本，
+              为主流招聘系统实现个人信息的自动填充。部分平台因安全限制无法完全应用，但整体显著提升了投递效率，也开启了对“用技术优化流程”的兴趣。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section>
+      <div class="section-head">
+        <div>
+          <div class="section-title">Tools &amp; Skills</div>
+          <div class="section-tagline">工具与技能</div>
+          <div class="section-line"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <ul>
+            <li>视频与音频：DaVinci Resolve、Adobe Premiere Pro、剪映（熟练）、Adobe Audition。</li>
+            <li>图像与排版：Adobe Photoshop、基础海报与物料排版设计。</li>
+            <li>办公与协作：Office 全套、秀米等排版工具，熟悉跨团队沟通与项目进度跟进。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Last updated by Chen Wanru · This page is built as a personal content portfolio.
+    </footer>
+  </div>
+</body>
+</html>
