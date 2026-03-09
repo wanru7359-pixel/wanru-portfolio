@@ -38,20 +38,18 @@
       overflow-x:hidden;
     }
 
-    /* subtle grid + noise-ish */
+    /* 宇宙感星光点阵 */
     .bg-grid{
       position:fixed; inset:0;
-      background-image:
-        linear-gradient(rgba(148,163,184,.10) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(148,163,184,.10) 1px, transparent 1px);
-      background-size: 56px 56px;
-      opacity:.12;
+      background-image: radial-gradient(rgba(255,255,255,.15) 1.5px, transparent 1.5px);
+      background-size: 32px 32px;
+      opacity:.3;
       pointer-events:none;
       z-index:-3;
     }
     .bg-vignette{
       position:fixed; inset:-40px;
-      background: radial-gradient(circle at 50% 50%, transparent 35%, rgba(0,0,0,.55) 80%);
+      background: radial-gradient(circle at 50% 50%, transparent 35%, rgba(0,0,0,.65) 80%);
       pointer-events:none;
       z-index:-2;
     }
@@ -65,7 +63,6 @@
       padding:34px 20px 80px;
     }
 
-    /* glass */
     .glass{
       background:var(--card);
       border:1px solid var(--border);
@@ -86,71 +83,24 @@
       header{ grid-template-columns: 1fr; }
     }
 
-    .hero-title{
-      font-size:34px;
-      font-weight:720;
-      letter-spacing:.02em;
-    }
-    .hero-sub{
-      margin-top:10px;
-      font-size:15px;
-      color:var(--muted);
-      max-width: 56ch;
-    }
-    .hero-meta{
-      margin-top:16px;
-      font-size:13px;
-      color:var(--muted2);
-    }
-
+    .hero-title{ font-size:34px; font-weight:720; letter-spacing:.02em; }
+    .hero-sub{ margin-top:6px; font-size:15px; color:var(--muted); max-width: 56ch; }
+    .hero-meta{ margin-top:12px; font-size:13px; color:var(--muted2); }
+    
     .about-card{ padding:18px 20px; display:grid; gap:12px; }
-    .about-row-title{
-      font-size:12px;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      color:#C7D2FF;
-    }
-    .about-row-cn{
-      margin-top:2px;
-      font-size:13px;
-      color:#EEF0FF;
-    }
-    .about-row-desc{
-      margin-top:6px;
-      font-size:12px;
-      color:var(--muted2);
-    }
+    .about-row-title{ font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#C7D2FF; }
+    .about-row-cn{ margin-top:2px; font-size:13px; color:#EEF0FF; }
+    .about-row-desc{ margin-top:6px; font-size:12px; color:var(--muted2); }
 
     section{ margin-top:36px; }
 
-    .section-head{
-      display:flex; justify-content:space-between; align-items:baseline;
-      gap:18px;
-      margin-bottom:14px;
-    }
-    .section-title{
-      font-size:16px;
-      font-weight:650;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-    .section-sub{
-      font-size:12px;
-      color:var(--muted2);
-    }
-    .section-line{
-      height:1px;
-      background: linear-gradient(to right, rgba(148,163,184,.55), transparent);
-      margin-top:8px;
-    }
+    .section-head{ display:flex; justify-content:space-between; align-items:baseline; gap:18px; margin-bottom:14px; }
+    .section-title{ font-size:16px; font-weight:650; letter-spacing:.12em; text-transform:uppercase; }
+    .section-sub{ font-size:12px; color:var(--muted2); }
+    .section-line{ height:1px; background: linear-gradient(to right, rgba(148,163,184,.55), transparent); margin-top:8px; }
 
-    .grid-2{
-      display:grid;
-      gap:16px;
-    }
-    @media (min-width: 860px){
-      .grid-2{ grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
-    }
+    .grid-2{ display:grid; gap:16px; }
+    @media (min-width: 860px){ .grid-2{ grid-template-columns: minmax(0,1fr) minmax(0,1fr); } }
 
     .card{
       padding:16px 16px 14px;
@@ -167,156 +117,47 @@
       box-shadow: var(--shadow), 0 0 26px rgba(124,58,237,.22);
     }
 
-    .media-card{
-      display:grid;
-      grid-template-columns: 122px minmax(0,1fr);
-      gap:12px;
-      align-items:start;
-      cursor:pointer;
-      user-select:none;
-    }
-    @media (max-width: 640px){
-      .media-card{ grid-template-columns: 1fr; }
-    }
+    .media-card{ display:grid; grid-template-columns: 122px minmax(0,1fr); gap:12px; align-items:start; cursor:pointer; user-select:none; }
+    @media (max-width: 640px){ .media-card{ grid-template-columns: 1fr; } }
 
     .thumb{
-      width:100%;
-      padding-top:66%;
-      border-radius:12px;
-      border:1px solid rgba(148,163,184,.28);
-      background:
-        linear-gradient(135deg, rgba(167,139,250,.24), rgba(56,189,248,.12)),
-        linear-gradient(180deg, rgba(15,23,42,.75), rgba(15,23,42,.75));
-      background-size:cover;
-      background-position:center;
-      box-shadow: 0 12px 30px rgba(0,0,0,.48);
+      width:100%; padding-top:66%; border-radius:12px; border:1px solid rgba(148,163,184,.28);
+      background: linear-gradient(135deg, rgba(167,139,250,.24), rgba(56,189,248,.12)), rgba(15,23,42,.75);
+      background-size:cover; background-position:center; box-shadow: 0 12px 30px rgba(0,0,0,.48);
     }
 
     .pill{
-      display:inline-flex;
-      align-items:center;
-      border:1px solid rgba(167,139,250,.55);
-      border-radius:999px;
-      padding:2px 8px;
-      font-size:10px;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      color:#D9D6FF;
-      opacity:.95;
+      display:inline-flex; align-items:center; border:1px solid rgba(167,139,250,.55); border-radius:999px;
+      padding:2px 8px; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#D9D6FF; opacity:.95;
     }
 
-    .card-title{
-      margin-top:7px;
-      font-size:14px;
-      font-weight:650;
-    }
-    .card-meta{
-      margin-top:3px;
-      font-size:12px;
-      color:var(--muted2);
-    }
-    .card-body{
-      margin-top:8px;
-      font-size:13px;
-      color:#E7E9FF;
-    }
+    .card-title{ margin-top:7px; font-size:14px; font-weight:650; }
+    .card-meta{ margin-top:3px; font-size:12px; color:var(--muted2); }
+    .card-body{ margin-top:8px; font-size:13px; color:#E7E9FF; }
     .card-body ul{ margin-top:6px; padding-left:18px; }
     .card-body li{ margin-bottom:4px; }
 
     /* Modal */
     .modal-overlay{
-      position:fixed; inset:0;
-      background: rgba(0,0,0,.78);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      display:none;
-      align-items:center;
-      justify-content:center;
-      padding:18px;
-      z-index:999;
+      position:fixed; inset:0; background: rgba(0,0,0,.78); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      display:none; align-items:center; justify-content:center; padding:18px; z-index:999;
     }
     .modal-overlay.active{ display:flex; }
-
-    .modal{
-      width:min(920px, 100%);
-      max-height: 88vh;
-      overflow:auto;
-      border-radius:22px;
-      border:1px solid rgba(148,163,184,.25);
-      background: rgba(15,23,42,.90);
-      box-shadow: 0 28px 70px rgba(0,0,0,.65), 0 0 30px rgba(124,58,237,.18);
-      position:relative;
-    }
-    .modal-close{
-      position:sticky;
-      top:0;
-      display:flex;
-      justify-content:flex-end;
-      padding:14px 14px 0;
-      z-index:2;
-    }
-    .close-btn{
-      width:38px; height:38px;
-      border-radius:999px;
-      border:1px solid rgba(148,163,184,.25);
-      background: rgba(255,255,255,.06);
-      color:#fff;
-      cursor:pointer;
-      font-size:18px;
-      line-height:38px;
-      text-align:center;
-      transition: background .2s ease;
-    }
+    .modal{ width:min(920px, 100%); max-height: 88vh; overflow:auto; border-radius:22px; border:1px solid rgba(148,163,184,.25); background: rgba(15,23,42,.90); box-shadow: 0 28px 70px rgba(0,0,0,.65), 0 0 30px rgba(124,58,237,.18); position:relative; }
+    .modal-close{ position:sticky; top:0; display:flex; justify-content:flex-end; padding:14px 14px 0; z-index:2; }
+    .close-btn{ width:38px; height:38px; border-radius:999px; border:1px solid rgba(148,163,184,.25); background: rgba(255,255,255,.06); color:#fff; cursor:pointer; font-size:18px; line-height:38px; text-align:center; transition: background .2s ease; }
     .close-btn:hover{ background: rgba(255,255,255,.12); }
-
-    .modal-hero{
-      height: 280px;
-      background:
-        radial-gradient(900px 420px at 20% 0%, rgba(167,139,250,.30), transparent 55%),
-        radial-gradient(900px 420px at 90% 10%, rgba(56,189,248,.16), transparent 55%),
-        linear-gradient(180deg, rgba(15,23,42,.25), rgba(15,23,42,.92));
-      border-bottom:1px solid rgba(148,163,184,.18);
-      position:relative;
-    }
-    .modal-hero-img{
-      position:absolute; inset:0;
-      background-size:cover;
-      background-position:center;
-      opacity:.70;
-      filter: saturate(1.08) contrast(1.02);
-      mix-blend-mode: screen;
-    }
+    .modal-hero{ height: 280px; background: radial-gradient(900px 420px at 20% 0%, rgba(167,139,250,.30), transparent 55%), radial-gradient(900px 420px at 90% 10%, rgba(56,189,248,.16), transparent 55%), linear-gradient(180deg, rgba(15,23,42,.25), rgba(15,23,42,.92)); border-bottom:1px solid rgba(148,163,184,.18); position:relative; }
+    .modal-hero-img{ position:absolute; inset:0; background-size:contain; background-repeat:no-repeat; background-position:center; opacity:.85; filter: saturate(1.08) contrast(1.02); }
     .modal-content{ padding:22px 26px 26px; }
     .modal-h2{ font-size:22px; font-weight:720; }
     .modal-role{ margin-top:6px; color:#C7B6FF; font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
     .modal-p{ margin-top:12px; color:#D6DAF5; font-size:14px; line-height:1.85; }
     .modal-ul{ margin-top:12px; padding-left:18px; color:#D6DAF5; }
     .modal-ul li{ margin-bottom:6px; }
-
-    .modal-gallery{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap:10px;
-    }
-    .modal-gallery .g{
-      border-radius:14px;
-      border:1px solid rgba(148,163,184,.20);
-      background:
-        linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10)),
-        rgba(15,23,42,.75);
-      padding-top:62%;
-      background-size:cover;
-      background-position:center;
-      box-shadow: 0 10px 24px rgba(0,0,0,.35);
-    }
-
-    footer{
-      margin-top:34px;
-      text-align:right;
-      font-size:11px;
-      color:var(--muted2);
-    }
+    .modal-gallery{ margin-top:18px; display:grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap:10px; }
+    .modal-gallery .g{ border-radius:14px; border:1px solid rgba(148,163,184,.20); background: linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10)), rgba(15,23,42,.75); padding-top:62%; background-size:cover; background-position:center; box-shadow: 0 10px 24px rgba(0,0,0,.35); }
+    footer{ margin-top:34px; text-align:right; font-size:11px; color:var(--muted2); }
   </style>
 </head>
 
@@ -328,29 +169,31 @@
 
     <!-- HERO -->
     <header>
-      <div>
-        <div class="hero-title">Chen Wanru 陈婉如</div>
-        <p class="hero-sub">
-          Content, new media and short-form storytelling across films, series, exhibitions and social feeds.
-        </p>
-        <p class="hero-meta">
-          Based in Beijing / Hong Kong · Portfolio site built with GitHub Pages.
-        </p>
+      <!-- 左侧：包含个人照片和文字介绍 -->
+      <div style="display:flex; align-items:center; gap:20px;">
+        <div style="width:100px; height:100px; border-radius:50%; overflow:hidden; border:2px solid rgba(167,139,250,.4); box-shadow:0 0 20px rgba(167,139,250,.2); flex-shrink:0;">
+          <!-- 对应你的个人照片命名 myphoto.jpg -->
+          <img src="images/myphoto.jpg" alt="Chen Wanru" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div>
+          <div class="hero-title">Chen Wanru 陈婉如</div>
+          <p class="hero-sub">Content, new media and short-form storytelling across films, series, exhibitions and social feeds.</p>
+          <p class="hero-meta">Based in Beijing / Hong Kong</p>
+        </div>
       </div>
 
+      <!-- 右侧：About Me 玻璃卡片 -->
       <div class="glass about-card">
         <div>
           <div class="about-row-title">Story is my language</div>
           <div class="about-row-cn">故事是我的语言</div>
           <div class="about-row-desc">用叙事把人物、情绪与节奏编织成可被传播的内容。</div>
         </div>
-
         <div>
           <div class="about-row-title">Data-aware creator</div>
           <div class="about-row-cn">用数据修剪内容</div>
           <div class="about-row-desc">用播放、互动、转化信号做复盘，让内容更“准”。</div>
         </div>
-
         <div>
           <div class="about-row-title">Always experimenting</div>
           <div class="about-row-cn">持续做小实验</div>
@@ -359,7 +202,7 @@
       </div>
     </header>
 
-    <!-- EDUCATION -->
+    <!-- EDUCATION & RESEARCH -->
     <section>
       <div class="section-head">
         <div>
@@ -371,18 +214,28 @@
 
       <div class="grid-2">
         <div class="card">
-          <div class="card-title">Beijing Film Academy｜广播电视编导</div>
-          <div class="card-meta">B.A. · 2021 – 2025 · GPA 88.35/100（Top 20%）</div>
+          <div class="card-title">Education Background</div>
           <div class="card-body">
-            核心课程：剪辑、声音制作、短视频策划与创作、剧作、综艺策划、广告策划等。
+            <div style="margin-bottom: 14px;">
+              <div style="font-size:14px; font-weight:600;">City University of Hong Kong</div>
+              <div style="color:var(--muted2); font-size:12px;">M.A. in Creative Media (Offer) · 2025 – 2026</div>
+            </div>
+            <div>
+              <div style="font-size:14px; font-weight:600;">Beijing Film Academy</div>
+              <div style="color:var(--muted2); font-size:12px;">B.A. in 广播电视编导 · 2021 – 2025</div>
+            </div>
           </div>
         </div>
 
         <div class="card">
-          <div class="card-title">City University of Hong Kong｜Creative Media</div>
-          <div class="card-meta">M.A. (Offer) · 2025 – 2026 · IELTS 7.5</div>
+          <div class="card-title">Academic Excellence</div>
           <div class="card-body">
-            课程方向：AI / 元宇宙 / 区块链理论、全球媒体政策与法律、社交媒体研究等。
+            <ul style="padding-left:18px; margin-top:4px;">
+              <li><strong>GPA:</strong> 88.35/100（Top 20%）</li>
+              <li><strong>Language:</strong> IELTS 7.5</li>
+              <li><strong>Scholarships:</strong> 请填写你的奖学金名称</li>
+              <li><strong>Honors:</strong> 请填写其他荣誉（如没有可删除此行）</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -391,7 +244,7 @@
         <div class="card-title">Research｜Douyin & Youth Culture</div>
         <div class="card-meta">4,000-word English academic essay</div>
         <div class="card-body">
-          研究抖音算法推荐与现象级内容如何影响青年文化认同与消费决策（可在弹窗中查看摘要与要点）。
+          研究抖音算法推荐与现象级内容如何影响青年文化认同与消费决策。
           <div style="margin-top:10px;">
             <a href="javascript:void(0)" class="pill" onclick="openModal('m-research')">Open details</a>
           </div>
@@ -404,93 +257,116 @@
       <div class="section-head">
         <div>
           <div class="section-title">Content Works</div>
-          <div class="section-sub">内容作品（两列：Films / Exhibitions）</div>
+          <div class="section-sub">内容作品（Films / Exhibitions）</div>
           <div class="section-line"></div>
         </div>
       </div>
 
       <div class="grid-2">
-        <!-- Films column -->
+        <!-- 左列：Films -->
         <div class="card">
           <div class="card-title">Films｜短片与短剧</div>
           <div class="card-body">
-
             <div class="media-card" onclick="openModal('m-film-spring')">
-              <div class="thumb" style="background-image:url('images/feature-short-on-the-eve.jpg'), linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10));"></div>
+              <!-- 对应 spring-poster.jpg -->
+              <div class="thumb" style="background-image:url('images/spring-poster.jpg');"></div>
               <div>
                 <div class="pill">Graduation Film</div>
-                <div class="card-title">《在春天来临之前》 On the Eve of Spring</div>
+                <div class="card-title">《在春天来临之前》</div>
                 <div class="card-meta">Director / Writer / Editor</div>
-                <div class="card-body">点击查看：简介、海报/剧照、你负责的工作与亮点。</div>
+                <div class="card-body">点击查看：简介、海报/剧照、你负责的工作。</div>
+              </div>
+            </div>
+
+            <div style="height:10px;"></div>
+
+            <div class="media-card" onclick="openModal('m-film-banxia')">
+              <div class="thumb" style="background-image:url('images/填写半夏短片封面名字.jpg');"></div>
+              <div>
+                <div class="pill">Short Film</div>
+                <div class="card-title">半夏短片名称（请替换）</div>
+                <div class="card-meta">Role (请替换)</div>
+                <div class="card-body">点击查看：该短片的详细说明。</div>
               </div>
             </div>
 
             <div style="height:10px;"></div>
 
             <div class="media-card" onclick="openModal('m-film-kaiji')">
-              <div class="thumb" style="background-image:url('images/shortdrama-action-cover-test-1.jpg'), linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10));"></div>
+              <!-- 对应 shortdrama-action-cover.jpg -->
+              <div class="thumb" style="background-image:url('images/shortdrama-action-cover.jpg');"></div>
               <div>
                 <div class="pill">Vertical Series</div>
                 <div class="card-title">竖屏短剧《开机！学院派》</div>
                 <div class="card-meta">Editor / DMT</div>
-                <div class="card-body">点击查看：你做了哪些交付、流程与技能点。</div>
+                <div class="card-body">点击查看：交付规范与技能点。</div>
               </div>
             </div>
 
             <div style="height:10px;"></div>
 
             <div class="media-card" onclick="openModal('m-film-xiyun')">
-              <div class="thumb" style="background-image:url('images/culture-video-xiyun.jpg'), linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10));"></div>
+              <!-- 对应 xiyun-screenshot-1.jpg -->
+              <div class="thumb" style="background-image:url('images/xiyun-screenshot-1.jpg');"></div>
               <div>
                 <div class="pill">Culture Video</div>
                 <div class="card-title">文化短视频《戏韵》</div>
                 <div class="card-meta">Editor</div>
-                <div class="card-body">点击查看：作品定位、剪辑思路与入围信息。</div>
+                <div class="card-body">点击查看：作品定位、剪辑思路。</div>
               </div>
             </div>
-
           </div>
         </div>
 
-        <!-- Exhibitions column -->
+        <!-- 右列：Exhibitions -->
         <div class="card">
           <div class="card-title">Exhibitions｜展览与装置</div>
           <div class="card-body">
-
             <div class="media-card" onclick="openModal('m-ex-buddha')">
-              <div class="thumb" style="background-image:url('images/exhibit-buddha.jpg'), linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10));"></div>
+              <div class="thumb" style="background-image:url('images/填写佛祖展封面名字.jpg');"></div>
               <div>
                 <div class="pill">Group Exhibition</div>
-                <div class="card-title">Aquamarine Project（佛祖主题）</div>
+                <div class="card-title">Aquamarine Project（佛祖）</div>
                 <div class="card-meta">Concept / Space storytelling</div>
-                <div class="card-body">点击查看：Pitch 摘要、现场图、你的贡献。</div>
+                <div class="card-body">点击查看：现场图与你的贡献。</div>
               </div>
             </div>
 
             <div style="height:10px;"></div>
 
             <div class="media-card" onclick="openModal('m-ex-ai')">
-              <div class="thumb" style="background-image:url('images/exhibit-ai-artifact.jpg'), linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10));"></div>
+              <div class="thumb" style="background-image:url('images/填写AI小册子封面名字.jpg');"></div>
               <div>
                 <div class="pill">Artifact / Zine</div>
-                <div class="card-title">AI Artifact 小册子（Da Yin）</div>
+                <div class="card-title">AI Artifact 小册子</div>
                 <div class="card-meta">Visual essay / Layout</div>
-                <div class="card-body">点击查看：电子版、设计思路与页面截图。</div>
+                <div class="card-body">点击查看：电子版与设计思路。</div>
               </div>
             </div>
 
             <div style="height:10px;"></div>
 
             <div class="media-card" onclick="openModal('m-ex-lottery')">
-              <div class="thumb" style="background-image:url('images/exhibit-lottery-anxiety.jpg'), linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10));"></div>
+              <div class="thumb" style="background-image:url('images/填写彩票焦虑封面名字.jpg');"></div>
               <div>
                 <div class="pill">Booth / Installation</div>
-                <div class="card-title">Lottery &amp; Anxiety（彩票与焦虑）</div>
+                <div class="card-title">Lottery &amp; Anxiety</div>
                 <div class="card-meta">Concept / Interaction</div>
-                <div class="card-body">点击查看：摊位图、互动设计、研究要点。</div>
+                <div class="card-body">点击查看：摊位图与互动设计。</div>
               </div>
             </div>
 
+            <div style="height:10px;"></div>
+
+            <div class="media-card" onclick="openModal('m-ex-roblox')">
+              <div class="thumb" style="background-image:url('images/填写Roblox封面名字.jpg');"></div>
+              <div>
+                <div class="pill">Metaverse Game</div>
+                <div class="card-title">Roblox 元宇宙游戏</div>
+                <div class="card-meta">Role (请替换)</div>
+                <div class="card-body">点击查看：游戏截图与设定。</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -501,56 +377,44 @@
       <div class="section-head">
         <div>
           <div class="section-title">New Media Operation</div>
-          <div class="section-sub">新媒体运营（卡片可点开看更多）</div>
+          <div class="section-sub">新媒体运营（个人 / 学校 / 公司）</div>
           <div class="section-line"></div>
         </div>
       </div>
 
       <div class="grid-2">
         <div class="card">
-          <div class="media-card" onclick="openModal('m-op-overseas')">
-            <div class="thumb" style="background-image:url('images/op-overseas.jpg'), linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10));"></div>
-            <div>
-              <div class="pill">Operation</div>
-              <div class="card-title">Overseas Short Drama Operation｜出海短剧</div>
-              <div class="card-meta">500+ content library · vendor coordination</div>
-              <div class="card-body">点击查看：你做了什么、关键数据、你的方法论。</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
           <div class="media-card" onclick="openModal('m-op-douyin')">
-            <div class="thumb" style="background-image:url('images/op-douyin.jpg'), linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10));"></div>
+            <div class="thumb" style="background-image:url('images/填写抖音封面名字.jpg');"></div>
             <div>
               <div class="pill">Creator</div>
-              <div class="card-title">Personal Douyin Account｜个人抖音号</div>
+              <div class="card-title">Personal Douyin｜个人抖音号</div>
               <div class="card-meta">177 videos · 54 万播+ · max 1M+</div>
-              <div class="card-body">点击查看：内容模型、栏目尝试、复盘与迭代。</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="media-card" onclick="openModal('m-op-xhs')">
-            <div class="thumb" style="background-image:url('images/op-xhs.jpg'), linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10));"></div>
-            <div>
-              <div class="pill">Social</div>
-              <div class="card-title">Xiaohongshu｜公司旅行账号</div>
-              <div class="card-meta">0-1 · reading +100% · followers +300%</div>
-              <div class="card-body">点击查看：内容产出、导流路径、可展示截图清单。</div>
+              <div class="card-body">点击查看：内容模型与栏目复盘。</div>
             </div>
           </div>
         </div>
 
         <div class="card">
           <div class="media-card" onclick="openModal('m-op-campus')">
-            <div class="thumb" style="background-image:url('images/op-campus.jpg'), linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10));"></div>
+            <div class="thumb" style="background-image:url('images/填写青春北影封面名字.jpg');"></div>
             <div>
               <div class="pill">Campus Media</div>
-              <div class="card-title">校园官方新媒体｜青春北影 / BFAer</div>
+              <div class="card-title">校园官方新媒体｜青春北影</div>
               <div class="card-meta">daily reach ~20k+</div>
-              <div class="card-body">点击查看：内容类型、产出节奏、活动宣发。</div>
+              <div class="card-body">点击查看：活动宣发与推文撰写。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="media-card" onclick="openModal('m-op-xhs')">
+            <div class="thumb" style="background-image:url('images/填写公司小红书封面名字.jpg');"></div>
+            <div>
+              <div class="pill">Company Social</div>
+              <div class="card-title">Xiaohongshu｜公司旅行账号</div>
+              <div class="card-meta">0-1 · reading +100% · followers +300%</div>
+              <div class="card-body">点击查看：导流路径与转化数据。</div>
             </div>
           </div>
         </div>
@@ -570,24 +434,36 @@
       <div class="grid-2">
         <div class="card">
           <div class="media-card" onclick="openModal('m-event-ogilvy')">
-            <div class="thumb" style="background-image:url('images/event-ogilvy.jpg'), linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10));"></div>
+            <div class="thumb" style="background-image:url('images/填写奥美项目封面名字.jpg');"></div>
             <div>
               <div class="pill">PR / Integrated</div>
               <div class="card-title">Ogilvy PR｜整合传播项目</div>
               <div class="card-meta">Story idea · campaign framework</div>
-              <div class="card-body">点击查看：你写的“故事创意”怎么讲更好听。</div>
+              <div class="card-body">点击查看：你写的创意框架。</div>
             </div>
           </div>
         </div>
 
         <div class="card">
           <div class="media-card" onclick="openModal('m-event-festival')">
-            <div class="thumb" style="background-image:url('images/event-festival.jpg'), linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10));"></div>
+            <div class="thumb" style="background-image:url('images/填写电影节封面名字.jpg');"></div>
             <div>
-              <div class="pill">Festival / On-site</div>
-              <div class="card-title">电影节 &amp; 现场执行</div>
-              <div class="card-meta">BIFF volunteer · youth film festival mentor</div>
-              <div class="card-body">点击查看：你做过哪些现场任务与协调。</div>
+              <div class="pill">Festival</div>
+              <div class="card-title">电影节志愿者 &amp; 导师</div>
+              <div class="card-meta">BIFF volunteer · youth mentor</div>
+              <div class="card-body">点击查看：现场协调与执行。</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="media-card" onclick="openModal('m-event-set')">
+            <div class="thumb" style="background-image:url('images/填写片场协作封面名字.jpg');"></div>
+            <div>
+              <div class="pill">On-site</div>
+              <div class="card-title">片场协作经验</div>
+              <div class="card-meta">Script Supervisor / Coordinator</div>
+              <div class="card-body">点击查看：同学短片剧组场记工作与现场协调。</div>
             </div>
           </div>
         </div>
@@ -603,15 +479,14 @@
           <div class="section-line"></div>
         </div>
       </div>
-
       <div class="card">
         <div class="media-card" onclick="openModal('m-lab-autofill')">
-          <div class="thumb" style="background-image:url('images/lab-auto-form.jpg'), linear-gradient(135deg, rgba(167,139,250,.18), rgba(56,189,248,.10));"></div>
+          <div class="thumb" style="background-image:url('images/填写实验室填表封面名字.jpg');"></div>
           <div>
             <div class="pill">Tool</div>
-            <div class="card-title">Job Application Auto-fill Helper｜自动填表工具</div>
+            <div class="card-title">Job Application Auto-fill Helper</div>
             <div class="card-meta">AI-assisted scripting</div>
-            <div class="card-body">点击查看：你怎么发现痛点、怎么做、学到了什么。</div>
+            <div class="card-body">点击查看：痛点、尝试与反思。</div>
           </div>
         </div>
       </div>
@@ -626,7 +501,6 @@
           <div class="section-line"></div>
         </div>
       </div>
-
       <div class="card">
         <div class="card-body">
           <ul>
@@ -644,52 +518,58 @@
   <!-- MODAL SHELL -->
   <div class="modal-overlay" id="overlay" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-label="Project details">
-      <div class="modal-close">
-        <div class="close-btn" id="btnClose">×</div>
-      </div>
+      <div class="modal-close"><div class="close-btn" id="btnClose">×</div></div>
       <div id="modalMount"></div>
     </div>
   </div>
 
   <!-- MODAL CONTENT STORE -->
   <template id="m-research">
-    <div class="modal-hero">
-      <div class="modal-hero-img" style="background-image:url('images/research.jpg');"></div>
-    </div>
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写论文研究弹窗大图.jpg');"></div></div>
     <div class="modal-content">
       <div class="modal-h2">Research｜Douyin, Youth Culture & Consumption</div>
       <div class="modal-role">English academic essay · 4,000 words</div>
-      <div class="modal-p">这里放你的摘要（可后续替换成更像“研究简介”的版本）。</div>
+      <div class="modal-p">摘要（可后续替换成更像“研究简介”的版本）。</div>
       <ul class="modal-ul">
         <li>研究问题：算法推荐如何影响青年文化认同与消费决策</li>
-        <li>方法：问卷/案例分析（按你真实内容改）</li>
-        <li>结论：可迁移到内容运营的洞察（按你真实内容改）</li>
+        <li>方法：问卷/案例分析</li>
       </ul>
     </div>
   </template>
 
   <template id="m-film-spring">
-    <div class="modal-hero">
-      <div class="modal-hero-img" style="background-image:url('images/feature-short-on-the-eve.jpg');"></div>
-    </div>
+    <!-- 对应 spring-poster.jpg 作为弹窗横幅 -->
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/spring-poster.jpg');"></div></div>
     <div class="modal-content">
       <div class="modal-h2">《在春天来临之前》 On the Eve of Spring</div>
       <div class="modal-role">Graduation Film · Director / Writer / Editor</div>
-      <div class="modal-p">把你 docx 里的简介精炼成 3–5 句放这里（我可以下一步帮你精修成更高级的英文/中文双语）。</div>
-      <ul class="modal-ul">
-        <li>你负责：剧本 / 导演 / 剪辑（按真实填写）</li>
-        <li>亮点：老师反馈、放映反馈（按真实填写）</li>
-      </ul>
+      <div class="modal-p">这里放你的项目简介。</div>
       <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/spring-1.jpg');"></div>
-        <div class="g" style="background-image:url('images/spring-2.jpg');"></div>
-        <div class="g" style="background-image:url('images/spring-3.jpg');"></div>
+        <!-- 对应 spring-still 1 到 4 -->
+        <div class="g" style="background-image:url('images/spring-still-1.jpg');"></div>
+        <div class="g" style="background-image:url('images/spring-still-2.jpg');"></div>
+        <div class="g" style="background-image:url('images/spring-still-3.jpg');"></div>
+        <div class="g" style="background-image:url('images/spring-still-4.jpg');"></div>
+      </div>
+    </div>
+  </template>
+
+  <template id="m-film-banxia">
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写半夏弹窗大图.jpg');"></div></div>
+    <div class="modal-content">
+      <div class="modal-h2">半夏短片项目</div>
+      <div class="modal-role">填写你的角色</div>
+      <div class="modal-p">这里填写关于半夏短片的说明文字。</div>
+      <div class="modal-gallery">
+        <div class="g" style="background-image:url('images/填写半夏详情图1.jpg');"></div>
+        <div class="g" style="background-image:url('images/填写半夏详情图2.jpg');"></div>
       </div>
     </div>
   </template>
 
   <template id="m-film-kaiji">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/shortdrama-action-cover-test-1.jpg');"></div></div>
+    <!-- 对应 shortdrama-action-cover.jpg 作为弹窗横幅 -->
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/shortdrama-action-cover.jpg');"></div></div>
     <div class="modal-content">
       <div class="modal-h2">竖屏短剧《开机！学院派》</div>
       <div class="modal-role">Editor / DMT</div>
@@ -698,161 +578,170 @@
         <li>DMT：转码合板、素材备份、交付规范</li>
       </ul>
       <div class="modal-gallery">
-       <div class="g" style="background-image:url('images/shortdrama-action-still-1.jpg');"></div>
-       <div class="g" style="background-image:url('images/shortdrama-action-still-2.jpg');"></div>
-       <div class="g" style="background-image:url('images/shortdrama-action-still-3.jpg');"></div>
-
+        <!-- 对应 shortdrama-action-still 1 到 3 -->
+        <div class="g" style="background-image:url('images/shortdrama-action-still-1.jpg');"></div>
+        <div class="g" style="background-image:url('images/shortdrama-action-still-2.jpg');"></div>
+        <div class="g" style="background-image:url('images/shortdrama-action-still-3.jpg');"></div>
       </div>
     </div>
   </template>
 
   <template id="m-film-xiyun">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/culture-video-xiyun.jpg');"></div></div>
+    <!-- 弹窗大图使用 xiyun-screenshot-1.jpg -->
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/xiyun-screenshot-1.jpg');"></div></div>
     <div class="modal-content">
       <div class="modal-h2">文化短视频《戏韵》</div>
       <div class="modal-role">Editor</div>
-      <div class="modal-p">补充：项目背景、剪辑思路、入围信息（按你真实材料写）。</div>
+      <div class="modal-p">补充：项目背景、剪辑思路、入围信息。</div>
+      <div class="modal-gallery">
+        <!-- 对应 xiyun-screenshot 2 到 4 -->
+        <div class="g" style="background-image:url('images/xiyun-screenshot-2.jpg');"></div>
+        <div class="g" style="background-image:url('images/xiyun-screenshot-3.jpg');"></div>
+        <div class="g" style="background-image:url('images/xiyun-screenshot-4.jpg');"></div>
+      </div>
     </div>
   </template>
 
   <template id="m-ex-buddha">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/exhibit-buddha.jpg');"></div></div>
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写佛祖展弹窗大图.jpg');"></div></div>
     <div class="modal-content">
       <div class="modal-h2">Aquamarine Project（佛祖主题展）</div>
       <div class="modal-role">Group exhibition · Concept / Space storytelling</div>
-      <div class="modal-p">这里写 Pitch 的 5 句精华 + 你具体做了什么（我可以帮你从 PDF 提炼成“展牌文案”）。</div>
+      <div class="modal-p">这里写 Pitch 的 5 句精华 + 你具体做了什么。</div>
       <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/buddha-1.jpg');"></div>
-        <div class="g" style="background-image:url('images/buddha-2.jpg');"></div>
-        <div class="g" style="background-image:url('images/buddha-3.jpg');"></div>
+        <div class="g" style="background-image:url('images/填写佛祖展详情图1.jpg');"></div>
       </div>
     </div>
   </template>
 
   <template id="m-ex-ai">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/exhibit-ai-artifact.jpg');"></div></div>
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写AI小册子弹窗大图.jpg');"></div></div>
     <div class="modal-content">
-      <div class="modal-h2">AI Artifact 小册子（Da Yin）</div>
+      <div class="modal-h2">AI Artifact 小册子</div>
       <div class="modal-role">Artifact / Visual essay</div>
-      <div class="modal-p">这里放：项目主题、你负责的部分、你最满意的 2 页（后面用图片展示）。</div>
+      <div class="modal-p">这里放：项目主题、你负责的部分。</div>
       <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/ai-1.jpg');"></div>
-        <div class="g" style="background-image:url('images/ai-2.jpg');"></div>
-        <div class="g" style="background-image:url('images/ai-3.jpg');"></div>
+        <div class="g" style="background-image:url('images/填写AI小册子详情图1.jpg');"></div>
       </div>
     </div>
   </template>
 
   <template id="m-ex-lottery">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/exhibit-lottery-anxiety.jpg');"></div></div>
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写彩票焦虑弹窗大图.jpg');"></div></div>
     <div class="modal-content">
-      <div class="modal-h2">Lottery &amp; Anxiety（彩票如何引发焦虑）</div>
+      <div class="modal-h2">Lottery &amp; Anxiety</div>
       <div class="modal-role">Booth / Installation</div>
       <div class="modal-p">这里写：研究点、互动机制、你们怎么把情绪可视化。</div>
       <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/lottery-1.jpg');"></div>
-        <div class="g" style="background-image:url('images/lottery-2.jpg');"></div>
+        <div class="g" style="background-image:url('images/填写彩票焦虑详情图1.jpg');"></div>
       </div>
     </div>
   </template>
 
-  <template id="m-op-overseas">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/op-overseas.jpg');"></div></div>
+  <template id="m-ex-roblox">
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写Roblox弹窗大图.jpg');"></div></div>
     <div class="modal-content">
-      <div class="modal-h2">Overseas Short Drama Operation｜出海短剧商务运营</div>
-      <div class="modal-role">Micoworld · 2024/11 – 2025/03</div>
-      <ul class="modal-ul">
-        <li>内容库：多语种内容评级与标签标记，参与搭建 500+ 内容库</li>
-        <li>协同：对接 20+ 翻译机构，推进质量评估，引入 2 家合作方</li>
-        <li>交付：兼职译者管理、质检、验收结算</li>
-      </ul>
-      <div class="modal-p">如果你不方便放公司 App 截图，我们就放“你做的标签体系示意图/表格截图（打码）”。</div>
+      <div class="modal-h2">Roblox 元宇宙游戏</div>
+      <div class="modal-role">填写角色</div>
+      <div class="modal-p">这里填写游戏设计思路与你的贡献。</div>
       <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/overseas-1.jpg');"></div>
-        <div class="g" style="background-image:url('images/overseas-2.jpg');"></div>
+        <div class="g" style="background-image:url('images/填写Roblox详情图1.jpg');"></div>
+        <div class="g" style="background-image:url('images/填写Roblox详情图2.jpg');"></div>
       </div>
     </div>
   </template>
 
   <template id="m-op-douyin">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/op-douyin.jpg');"></div></div>
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写抖音弹窗大图.jpg');"></div></div>
     <div class="modal-content">
-      <div class="modal-h2">Personal Douyin Account｜个人抖音号</div>
+      <div class="modal-h2">Personal Douyin Account</div>
       <div class="modal-role">Creator / Operator</div>
       <ul class="modal-ul">
-        <li>4 个月发布 177 条，54 条破万播放，最高单条 100 万+</li>
-        <li>内容模型：热点话题 + 宠物/娱乐</li>
-        <li>栏目尝试：兔兔聊八卦（复盘后及时调整方向）</li>
+        <li>4 个月发布 177 条，54 条破万播放</li>
       </ul>
       <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/douyin-1.jpg');"></div>
-        <div class="g" style="background-image:url('images/douyin-2.jpg');"></div>
-      </div>
-    </div>
-  </template>
-
-  <template id="m-op-xhs">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/op-xhs.jpg');"></div></div>
-    <div class="modal-content">
-      <div class="modal-h2">Xiaohongshu｜公司旅行账号</div>
-      <div class="modal-role">0-1 operation</div>
-      <ul class="modal-ul">
-        <li>短视频全流程：选题、剪辑、包装、多平台发布</li>
-        <li>同步图文：阅读量涨幅约 100%，账号涨粉约 300%</li>
-        <li>私信维护与导流（可加你能提供的转化数据区间）</li>
-      </ul>
-      <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/xhs-1.jpg');"></div>
-        <div class="g" style="background-image:url('images/xhs-2.jpg');"></div>
+        <div class="g" style="background-image:url('images/填写抖音详情图1.jpg');"></div>
       </div>
     </div>
   </template>
 
   <template id="m-op-campus">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/op-campus.jpg');"></div></div>
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写青春北影弹窗大图.jpg');"></div></div>
     <div class="modal-content">
-      <div class="modal-h2">校园官方新媒体｜青春北影 / BFAer</div>
+      <div class="modal-h2">校园官方新媒体｜青春北影</div>
       <div class="modal-role">Writing / Layout / Video</div>
       <ul class="modal-ul">
         <li>推文撰写、视觉排版、视频剪辑，日均触达 2w+</li>
-        <li>活动宣发：电影节、学术典礼等十余场</li>
       </ul>
+      <div class="modal-gallery">
+        <div class="g" style="background-image:url('images/填写青春北影详情图1.jpg');"></div>
+      </div>
+    </div>
+  </template>
+
+  <template id="m-op-xhs">
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写公司小红书弹窗大图.jpg');"></div></div>
+    <div class="modal-content">
+      <div class="modal-h2">Xiaohongshu｜公司旅行账号</div>
+      <div class="modal-role">0-1 operation</div>
+      <ul class="modal-ul">
+        <li>短视频全流程：选题、剪辑、多平台发布</li>
+      </ul>
+      <div class="modal-gallery">
+        <div class="g" style="background-image:url('images/填写公司小红书详情图1.jpg');"></div>
+      </div>
     </div>
   </template>
 
   <template id="m-event-ogilvy">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/event-ogilvy.jpg');"></div></div>
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写奥美项目弹窗大图.jpg');"></div></div>
     <div class="modal-content">
       <div class="modal-h2">Ogilvy｜PR 项目助理</div>
       <div class="modal-role">Integrated communication</div>
       <ul class="modal-ul">
         <li>参与头部品牌整合传播，产出核心传播故事创意</li>
-        <li>设计线上营销活动框架，协同完成方案</li>
       </ul>
+      <div class="modal-gallery">
+        <div class="g" style="background-image:url('images/填写奥美项目详情图1.jpg');"></div>
+      </div>
     </div>
   </template>
 
   <template id="m-event-festival">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/event-festival.jpg');"></div></div>
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写电影节弹窗大图.jpg');"></div></div>
     <div class="modal-content">
       <div class="modal-h2">电影节 &amp; 现场实践</div>
       <div class="modal-role">Festival / On-site</div>
       <ul class="modal-ul">
         <li>北京国际电影节 REELFOCUS 志愿者</li>
-        <li>青少年公益电影节：指导学生完成短片剧本与拍摄</li>
       </ul>
+      <div class="modal-gallery">
+        <div class="g" style="background-image:url('images/填写电影节详情图1.jpg');"></div>
+      </div>
+    </div>
+  </template>
+
+  <template id="m-event-set">
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写片场协作弹窗大图.jpg');"></div></div>
+    <div class="modal-content">
+      <div class="modal-h2">片场协作经验</div>
+      <div class="modal-role">Script Supervisor / Coordinator</div>
+      <div class="modal-p">这里详细写你在同学短片剧组的场记经验与统筹工作。</div>
+      <div class="modal-gallery">
+        <div class="g" style="background-image:url('images/填写片场协作详情图1.jpg');"></div>
+        <div class="g" style="background-image:url('images/填写片场协作详情图2.jpg');"></div>
+      </div>
     </div>
   </template>
 
   <template id="m-lab-autofill">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/lab-auto-form.jpg');"></div></div>
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写实验室填表弹窗大图.jpg');"></div></div>
     <div class="modal-content">
-      <div class="modal-h2">Job Application Auto-fill Helper｜自动填表工具</div>
+      <div class="modal-h2">Job Application Auto-fill Helper</div>
       <div class="modal-role">AI-assisted scripting</div>
-      <div class="modal-p">写成“创意实验室”展牌口吻：痛点→尝试→结果→反思（你会显得很聪明）。</div>
+      <div class="modal-p">痛点→尝试→结果→反思。</div>
       <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/lab-1.jpg');"></div>
-        <div class="g" style="background-image:url('images/lab-2.jpg');"></div>
+        <div class="g" style="background-image:url('images/填写实验室填表详情图1.jpg');"></div>
       </div>
     </div>
   </template>
@@ -861,7 +750,6 @@
     const overlay = document.getElementById('overlay');
     const mount = document.getElementById('modalMount');
     const btnClose = document.getElementById('btnClose');
-
     function openModal(tplId){
       const tpl = document.getElementById(tplId);
       if(!tpl) return;
@@ -870,18 +758,15 @@
       overlay.setAttribute('aria-hidden','false');
       document.body.style.overflow = 'hidden';
     }
-
     function closeModal(){
       overlay.classList.remove('active');
       overlay.setAttribute('aria-hidden','true');
       document.body.style.overflow = 'auto';
       setTimeout(()=>{ mount.innerHTML = ''; }, 200);
     }
-
     btnClose.addEventListener('click', closeModal);
     overlay.addEventListener('click', (e)=>{ if(e.target === overlay) closeModal(); });
     window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
   </script>
-
 </body>
 </html>
