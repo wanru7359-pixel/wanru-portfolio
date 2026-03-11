@@ -262,13 +262,14 @@
         </div>
       </div>
 
+      <!-- 注意：这里是唯一一个 grid-2，包裹了左右两列 -->
       <div class="grid-2">
+        
         <!-- 左列：Films -->
         <div class="card">
           <div class="card-title">Films｜短片与短剧</div>
           <div class="card-body">
             <div class="media-card" onclick="openModal('m-film-spring')">
-              <!-- 对应 spring-poster.jpg -->
               <div class="thumb" style="background-image:url('images/spring-poster.jpg');"></div>
               <div>
                 <div class="pill">Graduation Film</div>
@@ -293,7 +294,6 @@
             <div style="height:10px;"></div>
 
             <div class="media-card" onclick="openModal('m-film-kaiji')">
-              <!-- 对应 shortdrama-action-cover.jpg -->
               <div class="thumb" style="background-image:url('images/shortdrama-action-cover-test-1.jpg');"></div>
               <div>
                 <div class="pill">Vertical Series</div>
@@ -306,7 +306,6 @@
             <div style="height:10px;"></div>
 
             <div class="media-card" onclick="openModal('m-film-xiyun')">
-              <!-- 对应 xiyun-screenshot-1.jpg -->
               <div class="thumb" style="background-image:url('images/xiyun-screenshot-1.jpg');"></div>
               <div>
                 <div class="pill">Culture Video</div>
@@ -317,6 +316,7 @@
             </div>
        
             <div style="height:10px;"></div>
+
             <div class="media-card" onclick="openModal('m-film-scripts')">
               <div class="thumb" style="background-image:url('images/剧本封面图.jpg');"></div>
               <div>
@@ -327,17 +327,16 @@
               </div>
             </div>
             
-          </div> <!-- 这个是卡片内容的结束 -->
-        </div> <!-- 这个是左边整个大框的结束 -->
+          </div>
+        </div>
       
-        <div class="grid-2">
         <!-- 右列：Exhibitions -->
-        <div class="card">
+        <div class="card" style="height: 100%;">
           <div class="card-title">Exhibitions｜展览与装置</div>
           <div class="card-body">
             <div class="media-card" onclick="openModal('m-ex-buddha')">
               <div class="thumb" style="background-image:url('images/buddha-1.jpg');"></div>
-              <div style="width: 100%;"> 
+              <div style="min-width: 0;"> 
                 <div class="pill">Group Exhibition</div>
                 <div class="card-title">Buddha Project（佛祖）</div>
                 <div class="card-meta">Concept / Space storytelling</div>
@@ -349,7 +348,7 @@
 
             <div class="media-card" onclick="openModal('m-ex-ai')">
               <div class="thumb" style="background-image:url('images/Artifact-visual-essay-04.png');"></div>
-              <div style="width: 100%;"> 
+              <div style="min-width: 0;"> 
                 <div class="pill">Artifact / Zine</div>
                 <div class="card-title">AI Artifact 小册子</div>
                 <div class="card-meta">Visual essay / Layout</div>
@@ -361,7 +360,7 @@
 
             <div class="media-card" onclick="openModal('m-ex-lottery')">
               <div class="thumb" style="background-image:url('images/lottery-1.jpg');"></div>
-              <div style="width: 100%;"> 
+              <div style="min-width: 0;"> 
                 <div class="pill">Booth / Installation</div>
                 <div class="card-title">Lottery &amp; Anxiety</div>
                 <div class="card-meta">Concept / Interaction</div>
@@ -373,17 +372,20 @@
 
             <div class="media-card" onclick="openModal('m-ex-roblox')">
               <div class="thumb" style="background-image:url('images/填写Roblox封面名字.jpg');"></div>
-              <div style="width: 100%;"> 
+              <div style="min-width: 0;"> 
                 <div class="pill">Metaverse Game</div>
                 <div class="card-title">Roblox 元宇宙游戏</div>
                 <div class="card-meta">Role (请替换)</div>
                 <div class="card-body">点击查看：游戏截图与设定。</div>
               </div>
             </div>
+
           </div>
         </div>
-      </div>
+
+      </div> <!-- 整个 grid-2 在这里统一闭合 -->
     </section>
+   
 
     <!-- NEW MEDIA -->
     <section>
