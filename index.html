@@ -317,7 +317,7 @@
             </div>
           </div>
         </div>
-        
+            <!-- 剧本卡片加在这里，和其他电影一样在同一个大框里 -->
             <div style="height:10px;"></div>
             <div class="media-card" onclick="openModal('m-film-scripts')">
               <div class="thumb" style="background-image:url('images/剧本封面图.jpg');"></div>
@@ -328,7 +328,10 @@
                 <div class="card-body">点击查看：包含《玫瑰与青松》等多个剧本节选与题材介绍。</div>
               </div>
             </div>
-        
+            
+          </div> <!-- 这个是卡片内容的结束 -->
+        </div> <!-- 这个是左边整个大框的结束 -->
+      
 
         <!-- 右列：Exhibitions -->
         <div class="card">
@@ -393,11 +396,12 @@
           <div class="section-line"></div>
         </div>
       </div>
-
-      <div class="grid-2">
+      <!-- 新媒体部分 -->
+      <!-- 上半部：抖音和青春北影，左右两列 -->
+      <div class="grid-2" style="margin-bottom:16px;">
         <div class="card">
           <div class="media-card" onclick="openModal('m-op-douyin')">
-            <div class="thumb" style="background-image:url('images/douyin-tucaotu-2.jpg');"></div>
+            <div class="thumb" style="background-image:url('images/填写抖音封面名字.jpg');"></div>
             <div>
               <div class="pill">Creator</div>
               <div class="card-title">Personal Douyin｜个人抖音号</div>
@@ -418,20 +422,23 @@
             </div>
           </div>
         </div>
-
-               <div class="card">
-          <div class="pill" style="margin-bottom:8px;">Company Social</div>
-          <div class="card-title">Xiaohongshu｜公司旅行账号从 0 到 1</div>
-          <div class="card-meta">运营实习 · 涉密项目无配图展示</div>
-          <div class="card-body">
-            <ul>
-              <li><strong>全流程产出：</strong>独立负责短视频选题、剪辑包装与多平台发布。</li>
-              <li><strong>数据增长：</strong>实习期间实现账号阅读量涨幅约 100%，粉丝数增长超 300%。</li>
-              <li><strong>导流转化：</strong>负责私信维护与用户路径设计，提高实际业务转化率。</li>
-            </ul>
-          </div>
+      </div>
+      
+      <!-- 下半部：小红书，单独一个长框跨满全列 -->
+      <div class="card">
+        <div class="pill" style="margin-bottom:8px;">Company Social</div>
+        <div class="card-title">Xiaohongshu｜公司旅行账号从 0 到 1</div>
+        <div class="card-meta">运营实习 · 涉密项目无配图展示</div>
+        <div class="card-body">
+          <ul>
+            <li><strong>全流程产出：</strong>独立负责短视频选题、剪辑包装与多平台发布。</li>
+            <li><strong>数据增长：</strong>实习期间实现账号阅读量涨幅约 100%，粉丝数增长超 300%。</li>
+            <li><strong>导流转化：</strong>负责私信维护与用户路径设计，提高实际业务转化率。</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    <section>
+   
 
     <!-- EVENTS -->
     <section>
@@ -522,9 +529,8 @@
         </div>
       </div>
     </section>
+   
 
-    <footer>Last updated · GitHub Pages</footer>
-  </div>
 
   <!-- MODAL SHELL -->
   <div class="modal-overlay" id="overlay" aria-hidden="true">
