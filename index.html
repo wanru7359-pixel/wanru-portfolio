@@ -317,6 +317,18 @@
             </div>
           </div>
         </div>
+        
+            <div style="height:10px;"></div>
+            <div class="media-card" onclick="openModal('m-film-scripts')">
+              <div class="thumb" style="background-image:url('images/剧本封面图.jpg');"></div>
+              <div>
+                <div class="pill">Screenwriting</div>
+                <div class="card-title">剧本创作集</div>
+                <div class="card-meta">Writer / Concept</div>
+                <div class="card-body">点击查看：包含《玫瑰与青松》等多个剧本节选与题材介绍。</div>
+              </div>
+            </div>
+        
 
         <!-- 右列：Exhibitions -->
         <div class="card">
@@ -347,7 +359,7 @@
             <div style="height:10px;"></div>
 
             <div class="media-card" onclick="openModal('m-ex-lottery')">
-              <div class="thumb" style="background-image:url('images/填写彩票焦虑封面名字.jpg');"></div>
+              <div class="thumb" style="background-image:url('images/lottery-1.jpg');"></div>
               <div>
                 <div class="pill">Booth / Installation</div>
                 <div class="card-title">Lottery &amp; Anxiety</div>
@@ -385,7 +397,7 @@
       <div class="grid-2">
         <div class="card">
           <div class="media-card" onclick="openModal('m-op-douyin')">
-            <div class="thumb" style="background-image:url('images/填写抖音封面名字.jpg');"></div>
+            <div class="thumb" style="background-image:url('images/douyin-tucaotu-2.jpg');"></div>
             <div>
               <div class="pill">Creator</div>
               <div class="card-title">Personal Douyin｜个人抖音号</div>
@@ -407,18 +419,18 @@
           </div>
         </div>
 
-        <div class="card">
-          <div class="media-card" onclick="openModal('m-op-xhs')">
-            <div class="thumb" style="background-image:url('images/填写公司小红书封面名字.jpg');"></div>
-            <div>
-              <div class="pill">Company Social</div>
-              <div class="card-title">Xiaohongshu｜公司旅行账号</div>
-              <div class="card-meta">0-1 · reading +100% · followers +300%</div>
-              <div class="card-body">点击查看：导流路径与转化数据。</div>
-            </div>
+               <div class="card">
+          <div class="pill" style="margin-bottom:8px;">Company Social</div>
+          <div class="card-title">Xiaohongshu｜公司旅行账号从 0 到 1</div>
+          <div class="card-meta">运营实习 · 涉密项目无配图展示</div>
+          <div class="card-body">
+            <ul>
+              <li><strong>全流程产出：</strong>独立负责短视频选题、剪辑包装与多平台发布。</li>
+              <li><strong>数据增长：</strong>实习期间实现账号阅读量涨幅约 100%，粉丝数增长超 300%。</li>
+              <li><strong>导流转化：</strong>负责私信维护与用户路径设计，提高实际业务转化率。</li>
+            </ul>
           </div>
         </div>
-      </div>
     </section>
 
     <!-- EVENTS -->
@@ -431,16 +443,15 @@
         </div>
       </div>
 
-      <div class="grid-2">
         <div class="card">
-          <div class="media-card" onclick="openModal('m-event-ogilvy')">
-            <div class="thumb" style="background-image:url('images/填写奥美项目封面名字.jpg');"></div>
-            <div>
-              <div class="pill">PR / Integrated</div>
-              <div class="card-title">Ogilvy PR｜整合传播项目</div>
-              <div class="card-meta">Story idea · campaign framework</div>
-              <div class="card-body">点击查看：你写的创意框架。</div>
-            </div>
+          <div class="pill" style="margin-bottom:8px;">PR / Integrated</div>
+          <div class="card-title">Ogilvy PR｜头部品牌整合传播</div>
+          <div class="card-meta">项目助理 · 涉密项目无配图展示</div>
+          <div class="card-body">
+            <ul>
+              <li><strong>创意输出：</strong>参与核心品牌传播故事创意，产出贴合调性的文案与概念。</li>
+              <li><strong>方案策划：</strong>协助设计线上营销活动框架，跨团队协同推进方案落地。</li>
+            </ul>
           </div>
         </div>
 
@@ -481,7 +492,7 @@
       </div>
       <div class="card">
         <div class="media-card" onclick="openModal('m-lab-autofill')">
-          <div class="thumb" style="background-image:url('images/填写实验室填表封面名字.jpg');"></div>
+          <div class="thumb" style="background-image:url('images/tool-jobapplication-1.png');"></div>
           <div>
             <div class="pill">Tool</div>
             <div class="card-title">Job Application Auto-fill Helper</div>
@@ -604,6 +615,28 @@
     </div>
   </template>
 
+  <template id="m-film-scripts">
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/剧本弹窗大图.jpg');"></div></div>
+    <div class="modal-content">
+      <div class="modal-h2">剧本创作集锦</div>
+      <div class="modal-role">Screenwriter</div>
+      <div class="modal-p">这里放一段你对剧本创作的整体心得或风格介绍。</div>
+      <!-- 图文对应的单列布局 -->
+      <div style="margin-top:20px; display:flex; flex-direction:column; gap:24px;">
+        <div>
+          <img src="images/剧本截图1.jpg" style="width:100%; border-radius:12px; border:1px solid rgba(148,163,184,.20);">
+          <div style="margin-top:8px; font-size:13px; color:#C7B6FF; font-weight:600;">《玫瑰与青松》- 悬疑/爱情题材</div>
+          <div style="font-size:13px; color:var(--muted2);">一两句话简单介绍一下这个剧本的核心梗概。</div>
+        </div>
+        <div>
+          <img src="images/剧本截图2.jpg" style="width:100%; border-radius:12px; border:1px solid rgba(148,163,184,.20);">
+          <div style="margin-top:8px; font-size:13px; color:#C7B6FF; font-weight:600;">剧本名称2 - 题材</div>
+          <div style="font-size:13px; color:var(--muted2);">介绍介绍介绍...</div>
+        </div>
+      </div>
+    </div>
+  </template>  
+
   <template id="m-ex-buddha">
     <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/buddha-1.jpg');"></div></div>
     <div class="modal-content">
@@ -646,32 +679,42 @@
   </template>
 
   <template id="m-ex-lottery">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写彩票焦虑弹窗大图.jpg');"></div></div>
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/lottery-3.jpg');"></div></div>
     <div class="modal-content">
       <div class="modal-h2">Lottery &amp; Anxiety</div>
       <div class="modal-role">Booth / Installation</div>
       <div class="modal-p">这里写：研究点、互动机制、你们怎么把情绪可视化。</div>
       <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/填写彩票焦虑详情图1.jpg');"></div>
+        <div class="g" style="background-image:url('images/lottery-1.jpg');"></div>
+        <div class="g" style="background-image:url('images/lottery-poster.png');"></div>
+        <div class="g" style="background-image:url('images/lottery-4.jpg');"></div>        
       </div>
     </div>
   </template>
 
-  <template id="m-ex-roblox">
+    <template id="m-ex-roblox">
     <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写Roblox弹窗大图.jpg');"></div></div>
     <div class="modal-content">
-      <div class="modal-h2">Roblox 元宇宙游戏</div>
-      <div class="modal-role">填写角色</div>
-      <div class="modal-p">这里填写游戏设计思路与你的贡献。</div>
-      <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/填写Roblox详情图1.jpg');"></div>
-        <div class="g" style="background-image:url('images/填写Roblox详情图2.jpg');"></div>
+      <div class="modal-h2">Roblox 动物具身化元宇宙体验</div>
+      <div class="modal-role">Game Design / Interaction</div>
+      <div class="modal-p">通过Roblox平台让玩家以猫的视角体验世界，包含变身猫、互动装置等元素。</div>
+      
+      <!-- 瀑布流图文展示 -->
+      <div style="margin-top:20px; display:flex; flex-direction:column; gap:24px;">
+        <div>
+          <img src="images/roblox-cat-gallery-exterior.jpg" style="width:100%; border-radius:12px;">
+          <div style="margin-top:8px; font-size:13px; color:#C7D2FF; text-align:center;">美术馆全景外观：展示Cat Gallery建筑与巨型猫爬架</div>
+        </div>
+        <div>
+          <img src="images/roblox-cat-perspective.jpg" style="width:100%; border-radius:12px;">
+          <div style="margin-top:8px; font-size:13px; color:#C7D2FF; text-align:center;">猫眼视角体验：通过装置改变玩家视角的色彩与高度</div>
+        </div>
       </div>
     </div>
   </template>
 
   <template id="m-op-douyin">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写抖音弹窗大图.jpg');"></div></div>
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/douyin-tucaotu-2.jpg');"></div></div>
     <div class="modal-content">
       <div class="modal-h2">Personal Douyin Account</div>
       <div class="modal-role">Creator / Operator</div>
@@ -679,13 +722,14 @@
         <li>4 个月发布 177 条，54 条破万播放</li>
       </ul>
       <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/填写抖音详情图1.jpg');"></div>
+        <div class="g" style="background-image:url('images/douyin-tucaotu-1.jpg');"></div>
+        <div class="g" style="background-image:url('images/douyin-tucaotu-3.jpg');"></div>        
       </div>
     </div>
   </template>
 
   <template id="m-op-campus">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写青春北影弹窗大图.jpg');"></div></div>
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/qingchunbeidian-5.png');"></div></div>
     <div class="modal-content">
       <div class="modal-h2">校园官方新媒体｜青春北影</div>
       <div class="modal-role">Writing / Layout / Video</div>
@@ -693,7 +737,10 @@
         <li>推文撰写、视觉排版、视频剪辑，日均触达 2w+</li>
       </ul>
       <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/填写青春北影详情图1.jpg');"></div>
+        <div class="g" style="background-image:url('images/qingchunbeidian-1.jpg');"></div>
+        <div class="g" style="background-image:url('images/qingchunbeidian-2.jpg');"></div>        
+        <div class="g" style="background-image:url('images/qingchunbeidian-3.jpg');"></div>
+        <div class="g" style="background-image:url('images/qingchunbeidian-4.jpg');"></div>          
       </div>
     </div>
   </template>
@@ -754,13 +801,13 @@
   </template>
 
   <template id="m-lab-autofill">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写实验室填表弹窗大图.jpg');"></div></div>
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/tool-jobapplication-1.png');"></div></div>
     <div class="modal-content">
       <div class="modal-h2">Job Application Auto-fill Helper</div>
       <div class="modal-role">AI-assisted scripting</div>
       <div class="modal-p">痛点→尝试→结果→反思。</div>
       <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/填写实验室填表详情图1.jpg');"></div>
+        <div class="g" style="background-image:url('images/tool-jobapplication-2.png');"></div>
       </div>
     </div>
   </template>
