@@ -626,27 +626,43 @@
     </div>
   </template>
 
-  <template id="m-film-scripts">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/剧本弹窗大图.jpg');"></div></div>
+   <template id="m-film-scripts">
+    <div class="modal-hero">
+      <div class="modal-hero-img" style="background-image:url('images/剧本封面图.jpg');"></div>
+    </div>
     <div class="modal-content">
       <div class="modal-h2">剧本创作集锦</div>
       <div class="modal-role">Screenwriter</div>
-      <div class="modal-p">这里放一段你对剧本创作的整体心得或风格介绍。</div>
-      <!-- 图文对应的单列布局 -->
+      <div class="modal-p">
+        主要展示两部代表性剧本：一部原创科幻短片剧本，以及毕业作品《在春天来临之前》的前期剧本版本。
+      </div>
+
       <div style="margin-top:20px; display:flex; flex-direction:column; gap:24px;">
+        <!-- 科幻剧本 -->
         <div>
-          <img src="images/剧本截图1.jpg" style="width:100%; border-radius:12px; border:1px solid rgba(148,163,184,.20);">
-          <div style="margin-top:8px; font-size:13px; color:#C7B6FF; font-weight:600;">《玫瑰与青松》- 悬疑/爱情题材</div>
-          <div style="font-size:13px; color:var(--muted2);">一两句话简单介绍一下这个剧本的核心梗概。</div>
+          <img src="images/剧本截图-科幻.jpg" style="width:100%; border-radius:12px; border:1px solid rgba(148,163,184,.20);">
+          <div style="margin-top:8px; font-size:13px; color:#C7B6FF; font-weight:600;">
+            《釜中之豆 / The Bean in the Pot》｜科幻短片剧本
+          </div>
+          <div style="font-size:13px; color:var(--muted2);">
+            2055 年，一家“年度最佳雇主”公司用健康手环、情绪监测和关怀话术，打造名为“透明动物园”的内部项目，对副总裁候选人的全部生理与情感数据进行采集。 表面上，这是为员工减压的福祉计划，实际上是为了训练出一位更稳定、更高效、没有倦怠和犹疑的 AI 版管理者。
+剧本以候选人 Elara 的视角展开，以“透明动物园”和《七步诗》的意象为核心隐喻：员工既是锅里被煮的豆子，也是烧豆秸的火，他们的情绪、焦虑和创造力被当作燃料，去孵化一个更“理性”、更可控的 AI 继任者
+          </div>
         </div>
+
+        <!-- 毕设剧本 -->
         <div>
-          <img src="images/剧本截图2.jpg" style="width:100%; border-radius:12px; border:1px solid rgba(148,163,184,.20);">
-          <div style="margin-top:8px; font-size:13px; color:#C7B6FF; font-weight:600;">剧本名称2 - 题材</div>
-          <div style="font-size:13px; color:var(--muted2);">介绍介绍介绍...</div>
+          <img src="images/剧本截图-春天.jpg" style="width:100%; border-radius:12px; border:1px solid rgba(148,163,184,.20);">
+          <div style="margin-top:8px; font-size:13px; color:#C7B6FF; font-weight:600;">
+            《在春天来临之前》剧本 · 毕设短片前期稿
+          </div>
+          <div style="font-size:13px; color:var(--muted2);">
+            毕设短片《在春天来临之前》的剧本，从人物小传到分场纲要、对白再到拍摄脚本全部由我独立完成，多轮修改后进入拍摄阶段。网页上展示的是该短片的文学剧本。
+          </div>
         </div>
       </div>
     </div>
-  </template>  
+  </template>
 
   <template id="m-ex-buddha">
     <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/buddha-1.jpg');"></div></div>
@@ -703,26 +719,88 @@
     </div>
   </template>
 
-    <template id="m-ex-roblox">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写Roblox弹窗大图.jpg');"></div></div>
+     <template id="m-ex-roblox">
+    <div class="modal-hero">
+      <div class="modal-hero-img" style="background-image:url('images/roblox-game-1.png');"></div>
+    </div>
     <div class="modal-content">
-      <div class="modal-h2">Roblox 动物具身化元宇宙体验</div>
+      <div class="modal-h2">Roblox 动物具身化元宇宙游戏 · Cat Gallery</div>
       <div class="modal-role">Game Design / Interaction</div>
-      <div class="modal-p">通过Roblox平台让玩家以猫的视角体验世界，包含变身猫、互动装置等元素。</div>
-      
-      <!-- 瀑布流图文展示 -->
-      <div style="margin-top:20px; display:flex; flex-direction:column; gap:24px;">
-        <div>
-          <img src="images/roblox-cat-gallery-exterior.jpg" style="width:100%; border-radius:12px;">
-          <div style="margin-top:8px; font-size:13px; color:#C7D2FF; text-align:center;">美术馆全景外观：展示Cat Gallery建筑与巨型猫爬架</div>
-        </div>
-        <div>
-          <img src="images/roblox-cat-perspective.jpg" style="width:100%; border-radius:12px;">
-          <div style="margin-top:8px; font-size:13px; color:#C7D2FF; text-align:center;">猫眼视角体验：通过装置改变玩家视角的色彩与高度</div>
+      <div class="modal-p">
+        通过Roblox平台让玩家以猫的视角体验世界，包含变身猫、互动装置和美术馆空间叙事等元素。
+      </div>
+
+      <!-- 一排可滑动的图库的通用样式 -->
+      <style>
+        .row-gallery{ margin-top:18px; }
+        .row-title{
+          font-size:13px;
+          font-weight:600;
+          color:#C7D2FF;
+          margin-bottom:6px;
+        }
+        .row-strip{
+          display:flex;
+          gap:10px;
+          overflow-x:auto;
+          padding-bottom:4px;
+          scrollbar-width:thin;
+        }
+        .row-strip::-webkit-scrollbar{ height:6px; }
+        .row-strip::-webkit-scrollbar-thumb{
+          background:rgba(148,163,184,.6);
+          border-radius:999px;
+        }
+        .row-img{
+          flex:0 0 210px;   /* 每张图的宽度，可按需要调大或调小 */
+          height:130px;
+          border-radius:12px;
+          border:1px solid rgba(148,163,184,.25);
+          background-size:cover;
+          background-position:center;
+          background-repeat:no-repeat;
+        }
+      </style>
+
+      <!-- 第一排：游戏全景 7 张 -->
+      <div class="row-gallery">
+        <div class="row-title">游戏全景 · World overview</div>
+        <div class="row-strip">
+          <div class="row-img" style="background-image:url('images/roblox-overview-1.png');"></div>
+          <div class="row-img" style="background-image:url('images/roblox-overview-2.png');"></div>
+          <div class="row-img" style="background-image:url('images/roblox-overview-3.png');"></div>
+          <div class="row-img" style="background-image:url('images/roblox-overview-4.png');"></div>
+          <div class="row-img" style="background-image:url('images/roblox-overview-5.png');"></div>
+          <div class="row-img" style="background-image:url('images/roblox-overview-6.png');"></div>
+          <div class="row-img" style="background-image:url('images/roblox-overview-7.png');"></div>
         </div>
       </div>
+
+      <!-- 第二排：互动装置 / 游戏玩法 5 张 -->
+      <div class="row-gallery">
+        <div class="row-title">互动装置与玩法 · Interactions</div>
+        <div class="row-strip">
+          <div class="row-img" style="background-image:url('images/roblox-interaction-1.png');"></div>
+          <div class="row-img" style="background-image:url('images/roblox-interaction-2.png');"></div>
+          <div class="row-img" style="background-image:url('images/roblox-interaction-3.png');"></div>
+          <div class="row-img" style="background-image:url('images/roblox-interaction-4.png');"></div>
+          <div class="row-img" style="background-image:url('images/roblox-interaction-5.png');"></div>
+        </div>
+      </div>
+
+      <!-- 第三排：美术馆内部 3 张 -->
+      <div class="row-gallery">
+        <div class="row-title">美术馆内部空间 · Interior</div>
+        <div class="row-strip">
+          <div class="row-img" style="background-image:url('images/roblox-interior-1.png');"></div>
+          <div class="row-img" style="background-image:url('images/roblox-interior-2.png');"></div>
+          <div class="row-img" style="background-image:url('images/roblox-interior-3.png');"></div>
+        </div>
+      </div>
+
     </div>
   </template>
+
 
   <template id="m-op-douyin">
     <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/douyin-tucaotu-2.jpg');"></div></div>
