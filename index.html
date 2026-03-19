@@ -463,31 +463,45 @@
         </div>
       </div>
 
-      <!-- 下半部分：用 grid-2 把电影节和片场协作并排 -->
+       <!-- 下半部分：用 grid-2 把电影节和片场协作并排 -->
       <div class="grid-2">
+        
+        <!-- 电影节与导师 (移除了 onclick 跳转，改为直接展示) -->
         <div class="card">
-          <div class="media-card" onclick="openModal('m-event-festival')">
+          <div class="media-card" style="cursor: default;">
             <div class="thumb" style="background-image:url('images/dianyingjie-2.jpg');"></div>
             <div>
-              <div class="pill">Festival</div>
-              <div class="card-title">电影节志愿者 &amp; 导师</div>
-              <div class="card-meta">BIFF volunteer · youth mentor</div>
-              <div class="card-body">点击查看：现场协调与执行。</div>
+              <div class="pill">Festival & Mentor</div>
+              <div class="card-title">电影节执行 &amp; 创作导师</div>
+              <div class="card-meta">BIFF volunteer · Youth Mentor</div>
+              <div class="card-body">
+                <ul style="padding-left:14px; margin-top:4px; font-size:12px;">
+                  <li><strong>BJIFF 现场执行：</strong>担任北影节 REELFOCUS 单元展映统筹，负责观众动线引导与场控，保障百人规模展映平稳运行。</li>
+                  <li><strong>纪录片创作导师：</strong>受邀于北京青少年公益电影节，指导学生团队完成中轴线非遗纪录短片《珐琅映像》的驻地拍摄。</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         
+        <!-- 片场协作 (移除了 onclick 跳转，改为直接展示) -->
         <div class="card">
-          <div class="media-card" onclick="openModal('m-event-set')">
+          <div class="media-card" style="cursor: default;">
             <div class="thumb" style="background-image:url('images/pianchang-1.jpg');"></div>
             <div>
               <div class="pill">On-site</div>
-              <div class="card-title">片场协作经验</div>
+              <div class="card-title">片场统筹与协作经验</div>
               <div class="card-meta">Script Supervisor / Coordinator</div>
-              <div class="card-body">点击查看：同学短片剧组场记工作与现场协调。</div>
+              <div class="card-body">
+                <ul style="padding-left:14px; margin-top:4px; font-size:12px;">
+                  <li><strong>场记执行：</strong>参与多部独立短片，以极高的记录精度和轴线把控能力，保障跨部门信息对齐与拍摄连贯性。</li>
+                  <li><strong>现场统筹：</strong>作为剧组的“执行枢纽”，负责制作通告单、把控现场节奏与突发调度，是团队中最受信任的协作者。</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+
       </div> <!-- grid-2 结束 -->
 
     </section>
