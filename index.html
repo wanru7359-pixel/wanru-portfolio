@@ -396,29 +396,36 @@
           <div class="section-line"></div>
         </div>
       </div>
-      <!-- 新媒体部分 -->
+      
       <!-- 上半部：抖音和青春北影，左右两列 -->
       <div class="grid-2" style="margin-bottom:16px;">
-        <div class="card">
+        <!-- 个人抖音卡片：保留点击交互 -->
+        <div class="card" style="cursor: pointer; transition: transform .22s ease;">
           <div class="media-card" onclick="openModal('m-op-douyin')">
             <div class="thumb" style="background-image:url('images/douyin-tucaotu-4.jpg');"></div>
             <div>
-              <div class="pill">Creator</div>
-              <div class="card-title">Personal Douyin｜个人抖音号</div>
+              <div class="pill">Indie Creator</div>
+              <div class="card-title">Personal Douyin｜泛娱乐营销号</div>
               <div class="card-meta">177 videos · 54 万播+ · max 1M+</div>
-              <div class="card-body">点击查看：内容模型与栏目复盘。</div>
+              <div class="card-body">点击查看：一次验证商业嗅觉的独立创作复盘与变现反思。</div>
             </div>
           </div>
         </div>
 
+        <!-- 青春北影卡片：取消跳转，直接展示实力 -->
         <div class="card">
-          <div class="media-card" onclick="openModal('m-op-campus')">
+          <div class="media-card" style="cursor: default;">
             <div class="thumb" style="background-image:url('images/qingchunbeidian-5.png');"></div>
             <div>
               <div class="pill">Campus Media</div>
-              <div class="card-title">校园官方新媒体｜青春北电</div>
-              <div class="card-meta">daily reach ~20k+</div>
-              <div class="card-body">点击查看：活动宣发与推文撰写。</div>
+              <div class="card-title">官方新媒体｜青春北电</div>
+              <div class="card-meta">Daily reach ~20k+</div>
+              <div class="card-body" style="margin-top: 6px;">
+                <ul style="padding-left:14px; margin-top:2px; font-size:12px;">
+                  <li><strong>爆款产出：</strong>独立完成官方推文撰写、视觉排版及视频剪辑，日均触达师生2w+。</li>
+                  <li><strong>现场采编：</strong>负责十余场大型校园活动的新闻采编与现场摄制。</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -427,17 +434,18 @@
       <!-- 下半部：小红书，单独一个长框跨满全列 -->
       <div class="card">
         <div class="pill" style="margin-bottom:8px;">Company Social</div>
-        <div class="card-title">Xiaohongshu｜公司旅行账号从 0 到 1</div>
-        <div class="card-meta">运营实习 · 涉密项目无配图展示</div>
+        <div class="card-title">Xiaohongshu｜初创旅行公司从 0 到 1</div>
+        <div class="card-meta">新媒体运营 · 涉密项目无配图展示</div>
         <div class="card-body">
-          <ul>
-            <li><strong>全流程产出：</strong>独立负责短视频选题、剪辑包装与多平台发布。</li>
-            <li><strong>数据增长：</strong>实习期间实现账号阅读量涨幅约 100%，粉丝数增长超 300%。</li>
-            <li><strong>导流转化：</strong>负责私信维护与用户路径设计，提高实际业务转化率。</li>
+          <ul style="padding-left:14px; margin-top:4px; font-size:13px;">
+            <li><strong>全流程产出：</strong>独立负责旅行类短视频选题、剪辑包装与多平台发布，阅读量涨幅 100%。</li>
+            <li><strong>数据增长：</strong>负责官方小红书日常内容更新与基础维护，接手期间实现粉丝增长超 300%。</li>
+            <li><strong>导流转化：</strong>负责私信维护与用户路径设计，成功将平台咨询沉淀为私域客源，带来多笔真实酒店预订转化。</li>
           </ul>
         </div>
       </div>
-    <section>
+    </section>
+
    
 
     <!-- EVENTS -->
@@ -850,61 +858,6 @@
     </div>
   </template>
 
-  <template id="m-op-xhs">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写公司小红书弹窗大图.jpg');"></div></div>
-    <div class="modal-content">
-      <div class="modal-h2">Xiaohongshu｜公司旅行账号</div>
-      <div class="modal-role">0-1 operation</div>
-      <ul class="modal-ul">
-        <li>短视频全流程：选题、剪辑、多平台发布</li>
-      </ul>
-      <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/填写公司小红书详情图1.jpg');"></div>
-      </div>
-    </div>
-  </template>
-
-  <template id="m-event-ogilvy">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写奥美项目弹窗大图.jpg');"></div></div>
-    <div class="modal-content">
-      <div class="modal-h2">Ogilvy｜PR 项目助理</div>
-      <div class="modal-role">Integrated communication</div>
-      <ul class="modal-ul">
-        <li>参与头部品牌整合传播，产出核心传播故事创意</li>
-      </ul>
-      <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/填写奥美项目详情图1.jpg');"></div>
-      </div>
-    </div>
-  </template>
-
-  <template id="m-event-festival">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/dianyingjie-1.jpg');"></div></div>
-    <div class="modal-content">
-      <div class="modal-h2">电影节 &amp; 现场实践</div>
-      <div class="modal-role">Festival / On-site</div>
-      <ul class="modal-ul">
-        <li>北京国际电影节 REELFOCUS 志愿者</li>
-      </ul>
-      <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/zhidaojiaoshi-1.jpg');"></div>
-        <div class="g" style="background-image:url('images/zhidaojiaoshi-2.jpg');"></div>        
-      </div>
-    </div>
-  </template>
-
-  <template id="m-event-set">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/填写片场协作弹窗大图.jpg');"></div></div>
-    <div class="modal-content">
-      <div class="modal-h2">片场协作经验</div>
-      <div class="modal-role">Script Supervisor / Coordinator</div>
-      <div class="modal-p">这里详细写你在同学短片剧组的场记经验与统筹工作。</div>
-      <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/填写片场协作详情图1.jpg');"></div>
-        <div class="g" style="background-image:url('images/填写片场协作详情图2.jpg');"></div>
-      </div>
-    </div>
-  </template>
 
    <template id="m-lab-autofill">
     <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/tool-jobapplication-1.png');"></div></div>
