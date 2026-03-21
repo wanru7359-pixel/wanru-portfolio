@@ -523,9 +523,9 @@
           <div class="thumb" style="background-image:url('images/tool-jobapplication-1.png');"></div>
           <div>
             <div class="pill">Tool</div>
-            <div class="card-title">Job Application Auto-fill Helper</div>
+            <div class="card-title">Job Application Auto-fill Helper｜求职网申自动填表插件</div>
             <div class="card-meta">AI-assisted scripting</div>
-            <div class="card-body">点击查看：痛点、尝试与反思。</div>
+            <div class="card-body">点击查看：用代码解决重复劳动的真实痛点与开发反思。</div>
           </div>
         </div>
       </div>
@@ -908,15 +908,38 @@
 
   <template id="m-lab-autofill">
     <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/tool-jobapplication-1.png');"></div></div>
+    
     <div class="modal-content">
-      <div class="modal-h2">Job Application Auto-fill Helper</div>
-      <div class="modal-role">AI-assisted scripting</div>
-      <div class="modal-p">痛点→尝试→结果→反思。</div>
-      <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/tool-jobapplication-2.png');"></div>
+      <div class="modal-h2">Job Application Auto-fill Helper｜求职网申自动填表插件</div>
+      <div class="modal-role">Chrome Extension · Prompt Engineering / Experiment</div>
+      
+      <div class="modal-p">
+        这是一个为了解决“海投简历时重复填写基本信息”痛点，完全通过向大语言模型（Gemini）下达自然语言指令，零代码基础生成的浏览器扩展实验。
+      </div>
+      
+      <ul class="modal-ul" style="margin-top: 12px; font-size: 13px;">
+        <li><strong>产品逻辑设计：</strong>我向 AI 提出了核心需求闭环：通过抓取输入框周围的关键词（如“姓名”、“Phone”），自动匹配并一键填入 18 项个人信息，同时要求 AI 加上“输入框已有内容则跳过”的保护机制。</li>
+        <li><strong>AI 协作落地：</strong>通过多轮 Prompt 引导，我成功让大模型写出了 <code>manifest.json</code> 配置文件与 <code>content.js</code> 脚本，并在本地浏览器跑通了初步的填充功能。</li>
+        <li><strong>现实碰壁与洞察：</strong>在实际使用中我发现，尽管能填入文字，但许多大企业网申系统复杂的安全机制与前端框架会拦截“非人类键盘敲击”的自动化输入。这次并不完美的实验让我深刻意识到了：AI 能快速生成代码，但工具的最终落地依然受限于真实商业环境中的底层规则。</li>
+      </ul>
+
+      <div style="margin-top: 20px; font-size: 13px; font-weight: 600; color: #C7D2FF;">代码与运行截图 (点击查看大图)</div>
+      
+      <div class="modal-gallery" style="margin-top: 10px;">
+        <a href="images/tool-jobapplication-2.png" target="_blank" style="text-decoration: none;">
+          <div class="g zoom-img" style="background-image:url('images/tool-jobapplication-2.png'); position: relative;">
+            <div style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); padding: 4px; border-radius: 4px; color: white; font-size: 10px;">🔍 放大</div>
+          </div>
+        </a>
       </div>
     </div>
+    
+    <style>
+      .zoom-img { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+      .zoom-img:hover { transform: scale(1.03); box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
+    </style>
   </template>
+
 
   <script>
     const overlay = document.getElementById('overlay');
