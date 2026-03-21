@@ -906,7 +906,7 @@
     </div>
   </template>
 
-  <template id="m-lab-autofill">
+   <template id="m-lab-autofill">
     <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/tool-jobapplication-1.png');"></div></div>
     
     <div class="modal-content">
@@ -926,11 +926,10 @@
       <div style="margin-top: 20px; font-size: 13px; font-weight: 600; color: #C7D2FF;">代码与运行截图 (点击查看大图)</div>
       
       <div class="modal-gallery" style="margin-top: 10px;">
-        <a href="images/tool-jobapplication-2.png" target="_blank" style="text-decoration: none;">
-          <div class="g zoom-img" style="background-image:url('images/tool-jobapplication-2.png'); position: relative;">
+        <!-- 改成了 onclick 触发页面内放大，光标变成放大镜 -->
+        <div class="g zoom-img" onclick="openImageModal('images/tool-jobapplication-2.png')" style="background-image:url('images/tool-jobapplication-2.png'); position: relative; cursor: zoom-in;">
             <div style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); padding: 4px; border-radius: 4px; color: white; font-size: 10px;">🔍 放大</div>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
     
@@ -941,7 +940,14 @@
   </template>
 
 
+
+  <!-- 图片放大专属蒙层（Lightbox），放在原有 script 的上面 -->
+  <div id="imageModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); z-index:9999; align-items:center; justify-content:center; cursor:zoom-out;">
+    <img id="enlargedImg" style="max-width:90%; max-height:90vh; border-radius:8px; box-shadow:0 0 40px rgba(0,0,0,0.8);" src="" alt="Enlarged Image">
+  </div>
+
   <script>
+    // 1. 原有的项目弹窗逻辑（保留不变）
     const overlay = document.getElementById('overlay');
     const mount = document.getElementById('modalMount');
     const btnClose = document.getElementById('btnClose');
@@ -961,7 +967,33 @@
     }
     btnClose.addEventListener('click', closeModal);
     overlay.addEventListener('click', (e)=>{ if(e.target === overlay) closeModal(); });
-    window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
+    
+    // 2. 新增的图片放大专属逻辑
+    const imageModal = document.getElementById('imageModal');
+    const enlargedImg = document.getElementById('enlargedImg');
+
+    function openImageModal(imgSrc) {
+      enlargedImg.src = imgSrc;
+      imageModal.style.display = 'flex';
+    }
+
+    // 点击背景或放大后的图片即可关闭
+    imageModal.addEventListener('click', function() {
+      imageModal.style.display = 'none';
+      enlargedImg.src = '';
+    });
+
+    // 3. 增强的键盘支持：按 ESC 键不仅能关项目弹窗，也能关放大的图片
+    window.addEventListener('keydown', (e)=>{ 
+      if(e.key === 'Escape') {
+        if(imageModal.style.display === 'flex') {
+          imageModal.style.display = 'none';
+          enlargedImg.src = '';
+        } else {
+          closeModal(); 
+        }
+      } 
+    });
   </script>
 </body>
 </html>
