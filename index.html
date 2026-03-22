@@ -344,51 +344,56 @@
       
         <!-- 右列：Exhibitions -->
         <div class="card" style="height: 100%;">
-          <div class="card-title">Exhibitions｜展览与装置</div>
+          <div class="card-title" style="margin-bottom: 12px;">Exhibitions｜展览与装置</div>
           <div class="card-body">
-            <div class="media-card" onclick="openModal('m-ex-buddha')">
+            
+            <!-- 1. 佛祖 -->
+            <div class="media-card" onclick="openModal('m-ex-buddha')" style="cursor: pointer; transition: transform .22s ease;">
               <div class="thumb" style="background-image:url('images/buddha-1.jpg');"></div>
               <div style="min-width: 0;"> 
-                <div class="pill">Group Exhibition</div>
-                <div class="card-title">Buddha Project（佛祖）</div>
-                <div class="card-meta">Concept / Space storytelling</div>
-                <div class="card-body">点击查看：现场图与你的贡献。</div>
+                <div class="pill">Interactive Installation</div>
+                <div class="card-title">What If...Buddha Becomes Selfish?</div>
+                <div class="card-meta">Concept / Space Storytelling</div>
+                <div class="card-body">点击查看：一个打破“许愿白嫖”逻辑的反乌托邦祈福装置。</div>
               </div>
             </div>
 
             <div style="height:20px;"></div>
 
-            <div class="media-card" onclick="openModal('m-ex-ai')">
+            <!-- 2. AI 册子 -->
+            <div class="media-card" onclick="openModal('m-ex-ai')" style="cursor: pointer; transition: transform .22s ease;">
               <div class="thumb" style="background-image:url('images/Artifact-visual-essay-04.png');"></div>
               <div style="min-width: 0;"> 
-                <div class="pill">Artifact / Zine</div>
-                <div class="card-title">AI Artifact 小册子</div>
-                <div class="card-meta">Visual essay / Layout</div>
-                <div class="card-body">点击查看：电子版与设计思路。</div>
+                <div class="pill">Visual Essay / Zine</div>
+                <div class="card-title">AI Watermark｜真实性消亡手册</div>
+                <div class="card-meta">Content Strategy / Metaphor Design</div>
+                <div class="card-body">点击查看：将枯燥的符号学研究，转化为具有视觉冲击力和隐喻表达的实体阅读体验。</div>
               </div>
             </div>
 
             <div style="height:20px;"></div>
 
-            <div class="media-card" onclick="openModal('m-ex-lottery')">
+            <!-- 3. 彩票摊位 -->
+            <div class="media-card" onclick="openModal('m-ex-lottery')" style="cursor: pointer; transition: transform .22s ease;">
               <div class="thumb" style="background-image:url('images/lottery-1.jpg');"></div>
               <div style="min-width: 0;"> 
-                <div class="pill">Booth / Installation</div>
-                <div class="card-title">Lottery &amp; Anxiety</div>
-                <div class="card-meta">Concept / Interaction</div>
-                <div class="card-body">点击查看：摊位图与互动设计。</div>
+                <div class="pill">Booth Experience</div>
+                <div class="card-title">Lottery &amp; Anxiety 互动摊位</div>
+                <div class="card-meta">Event Design / Interactive Experience</div>
+                <div class="card-body">点击查看：通过“猜拳刮奖”与情绪记录，让观众在现场物理体验彩票机制如何制造焦虑。</div>
               </div>
             </div>
 
             <div style="height:20px;"></div>
 
-            <div class="media-card" onclick="openModal('m-ex-roblox')">
+            <!-- 4. Roblox 游戏 -->
+            <div class="media-card" onclick="openModal('m-ex-roblox')" style="cursor: pointer; transition: transform .22s ease;">
               <div class="thumb" style="background-image:url('images/roblox-game-1.png');"></div>
               <div style="min-width: 0;"> 
                 <div class="pill">Metaverse Game</div>
-                <div class="card-title">Roblox 元宇宙游戏</div>
-                <div class="card-meta">Role (请替换)</div>
-                <div class="card-body">点击查看：游戏截图与设定。</div>
+                <div class="card-title">Roblox 动物具身化游戏</div>
+                <div class="card-meta">Concept / Scene Building</div>
+                <div class="card-body">点击查看：在猫咪的视角中，体验逃离人类身份的破坏与狂欢。</div>
               </div>
             </div>
 
@@ -397,6 +402,7 @@
 
       </div> <!-- 整个 grid-2 在这里统一闭合 -->
     </section>
+
    
 
     <!-- NEW MEDIA -->
@@ -684,142 +690,143 @@
   </template>
 
 
+  <!-- 1. 佛祖 -->
   <template id="m-ex-buddha">
     <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/buddha-1.jpg');"></div></div>
     <div class="modal-content">
-      <div class="modal-h2">Buddha</div>
-      <div class="modal-role">Group exhibition · Concept / Space storytelling</div>
-      <div class="modal-p">这里写 Pitch 的 5 句精华 + 你具体做了什么。</div>
-      <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/buddha-2.jpg');"></div>
-        <div class="g" style="background-image:url('images/buddha-3.jpg');"></div>
+      <div class="modal-h2">What If...Buddha Becomes Selfish?</div>
+      <div class="modal-role">Interactive Installation · Concept / Space storytelling</div>
+      <div class="modal-p" style="margin-bottom: 12px; font-size: 13px;">
+        <strong>概念策划：</strong>现代人在寺庙的祈福往往变成了单向的“许愿白嫖”。为了打破这种功利逻辑，我们设计了一个反乌托邦的“赛博佛祖业力机器”。
+      </div>
+      <div class="modal-p" style="font-size: 13px;">
+        <strong>互动与动线设计：</strong>我参与主导了现场仪式的空间叙事。观众必须强制进入因果循环：先敲击电子木鱼，抽签完成上一个人留下的“因”（写在绿叶便签上），才能把自己的“果/愿望”（写在红苹果便签上）挂到墙上。原本抽象的业力（Karma），被我们具象化为一场强迫性的、需要用身体去兑换的物理空间体验。
+      </div>
+      <div class="modal-gallery" style="margin-top: 18px;">
+        <div class="g zoom-img" onclick="openImageModal('images/buddha-2.jpg')" style="background-image:url('images/buddha-2.jpg'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/buddha-3.jpg')" style="background-image:url('images/buddha-3.jpg'); position: relative; cursor: zoom-in;"></div>
       </div>
     </div>
   </template>
 
+  <!-- 2. AI 小册子 -->
   <template id="m-ex-ai">
     <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/Artifact-visual-essay-04.png');"></div></div>
     <div class="modal-content">
-      <div class="modal-h2">AI Artifact 小册子</div>
-      <div class="modal-role">Artifact / Visual essay</div>
-      <div class="modal-p">这里放：项目主题、你负责的部分。</div>
-      <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-00.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-01.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-02.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-03.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-04.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-05.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-06.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-07.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-08.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-09.png');"></div>        
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-10.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-11.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-12.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-13.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-14.png');"></div>
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-15.png');"></div>          
-        <div class="g" style="background-image:url('images/Artifact-visual-essay-16.png');"></div>         
+      <div class="modal-h2">AI Watermark｜真实性消亡视觉手册</div>
+      <div class="modal-role">Artifact / Content Strategy / Metaphor Design</div>
+      <div class="modal-p" style="margin-bottom: 12px; font-size: 13px;">
+        <strong>内容策划：</strong>这是一个探讨 AI 时代“真实性”被消解的视觉出版物。我负责了核心内容的架构与隐喻设计，决定用什么样的视觉对比来向观众解释枯燥的符号学。
+      </div>
+      <div class="modal-p" style="font-size: 13px;">
+        <strong>隐喻设计：</strong>我策划了手册中的核心对比组：将传统艺术（如梵高的笔触、中国画的印章等依赖物理痕迹的共识）与现代 AI 水印（一种极度脆弱、易被人类篡改的技术符号）放在一起对撞。通过一分为二的红玫瑰与机械玫瑰等隐喻内容，向读者揭示了“说谎者红利”的危机。
+      </div>
+      <div class="modal-gallery" style="margin-top: 18px;">
+        <!-- 给小册子图片加上放大功能 -->
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-00.png')" style="background-image:url('images/Artifact-visual-essay-00.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-01.png')" style="background-image:url('images/Artifact-visual-essay-01.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-02.png')" style="background-image:url('images/Artifact-visual-essay-02.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-03.png')" style="background-image:url('images/Artifact-visual-essay-03.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-04.png')" style="background-image:url('images/Artifact-visual-essay-04.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-05.png')" style="background-image:url('images/Artifact-visual-essay-05.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-06.png')" style="background-image:url('images/Artifact-visual-essay-06.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-07.png')" style="background-image:url('images/Artifact-visual-essay-07.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-08.png')" style="background-image:url('images/Artifact-visual-essay-08.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-09.png')" style="background-image:url('images/Artifact-visual-essay-09.png'); position: relative; cursor: zoom-in;"></div>        
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-10.png')" style="background-image:url('images/Artifact-visual-essay-10.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-11.png')" style="background-image:url('images/Artifact-visual-essay-11.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-12.png')" style="background-image:url('images/Artifact-visual-essay-12.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-13.png')" style="background-image:url('images/Artifact-visual-essay-13.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-14.png')" style="background-image:url('images/Artifact-visual-essay-14.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-15.png')" style="background-image:url('images/Artifact-visual-essay-15.png'); position: relative; cursor: zoom-in;"></div>          
+        <div class="g zoom-img" onclick="openImageModal('images/Artifact-visual-essay-16.png')" style="background-image:url('images/Artifact-visual-essay-16.png'); position: relative; cursor: zoom-in;"></div>         
       </div>
     </div>
   </template>
 
+  <!-- 3. 彩票摊位 -->
   <template id="m-ex-lottery">
     <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/lottery-3.jpg');"></div></div>
     <div class="modal-content">
-      <div class="modal-h2">Lottery &amp; Anxiety</div>
-      <div class="modal-role">Booth / Installation</div>
-      <div class="modal-p">这里写：研究点、互动机制、你们怎么把情绪可视化。</div>
-      <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/lottery-1.jpg');"></div>
-        <div class="g" style="background-image:url('images/lottery-poster.png');"></div>
-        <div class="g" style="background-image:url('images/lottery-4.jpg');"></div>        
+      <div class="modal-h2">Lottery &amp; Anxiety 互动摊位</div>
+      <div class="modal-role">Event Design / Interactive Experience</div>
+      <div class="modal-p" style="margin-bottom: 12px; font-size: 13px;">
+        <strong>概念策划：</strong>基于对 5 个城市 25 家彩票店的田野调查，我们分析了彩票系统是如何通过空间视觉布局放大公众焦虑并让赌博合理化的。但如何把这个枯燥的统计结果展示给观众？
+      </div>
+      <div class="modal-p" style="font-size: 13px;">
+        <strong>现场互动设计：</strong>我们在展览现场搭建了一个彩票摊。我设计了“猜拳赢彩票”的机制代替现金购买，并通过故意布置的大奖海报刺激观众的胜负欲。当观众刮开彩票后，必须在墙上写下当下的情绪。通过这种情绪拉扯和实体记录，我们将抽象的数据转化为了极具现场张力的社会实验。
+      </div>
+      <div class="modal-gallery" style="margin-top: 18px;">
+        <div class="g zoom-img" onclick="openImageModal('images/lottery-1.jpg')" style="background-image:url('images/lottery-1.jpg'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/lottery-poster.png')" style="background-image:url('images/lottery-poster.png'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/lottery-4.jpg')" style="background-image:url('images/lottery-4.jpg'); position: relative; cursor: zoom-in;"></div>        
       </div>
     </div>
   </template>
 
-     <template id="m-ex-roblox">
+  <!-- 4. Roblox 游戏 -->
+  <template id="m-ex-roblox">
     <div class="modal-hero">
       <div class="modal-hero-img" style="background-image:url('images/roblox-game-1.png');"></div>
     </div>
     <div class="modal-content">
-      <div class="modal-h2">Roblox 动物具身化元宇宙游戏 · Cat Gallery</div>
-      <div class="modal-role">Game Design / Interaction</div>
-      <div class="modal-p">
-        通过Roblox平台让玩家以猫的视角体验世界，包含变身猫、互动装置和美术馆空间叙事等元素。
+      <div class="modal-h2">Roblox 动物具身化游戏 · Cat Gallery</div>
+      <div class="modal-role">Concept / Scene Building</div>
+      <div class="modal-p" style="margin-bottom: 12px; font-size: 13px;">
+        <strong>机制提出：</strong>这是一款基于 Roblox 平台的元宇宙体验游戏。我提出了“改变视平线与人类行为逻辑”的核心玩法：玩家进入游戏后将化身为猫，通过猫咪的视角去体验世界。
+      </div>
+      <div class="modal-p" style="font-size: 13px;">
+        <strong>场景搭建：</strong>我参与搭建了猫咪美术馆的互动环境。为了使玩家适应猫的身体，我们设计了极低的入口门（玩家必须弯腰/下蹲才能进入）、可以爬上去晒太阳的巨型猫爬架，以及墙上悬挂的猫咪版世界名画。通过这些空间尺度的重构，为玩家提供了一场短暂逃离人类身份的奇妙体验。
       </div>
 
-      <!-- 一排可滑动的图库的通用样式 -->
       <style>
         .row-gallery{ margin-top:18px; }
-        .row-title{
-          font-size:13px;
-          font-weight:600;
-          color:#C7D2FF;
-          margin-bottom:6px;
-        }
-        .row-strip{
-          display:flex;
-          gap:10px;
-          overflow-x:auto;
-          padding-bottom:4px;
-          scrollbar-width:thin;
-        }
+        .row-title{ font-size:13px; font-weight:600; color:#C7D2FF; margin-bottom:6px; }
+        .row-strip{ display:flex; gap:10px; overflow-x:auto; padding-bottom:4px; scrollbar-width:thin; }
         .row-strip::-webkit-scrollbar{ height:6px; }
-        .row-strip::-webkit-scrollbar-thumb{
-          background:rgba(148,163,184,.6);
-          border-radius:999px;
-        }
-        .row-img{
-          flex:0 0 210px;   /* 每张图的宽度，可按需要调大或调小 */
-          height:130px;
-          border-radius:12px;
-          border:1px solid rgba(148,163,184,.25);
-          background-size:cover;
-          background-position:center;
-          background-repeat:no-repeat;
-        }
+        .row-strip::-webkit-scrollbar-thumb{ background:rgba(148,163,184,.6); border-radius:999px; }
+        .row-img{ flex:0 0 210px; height:130px; border-radius:12px; border:1px solid rgba(148,163,184,.25); background-size:cover; background-position:center; background-repeat:no-repeat; position: relative; cursor: zoom-in; }
       </style>
 
-      <!-- 第一排：游戏全景 7 张 -->
+      <!-- 第一排：游戏全景 7 张 (全加了放大功能) -->
       <div class="row-gallery">
         <div class="row-title">游戏全景 · World overview</div>
         <div class="row-strip">
-          <div class="row-img" style="background-image:url('images/roblox-overview-1.png');"></div>
-          <div class="row-img" style="background-image:url('images/roblox-overview-2.png');"></div>
-          <div class="row-img" style="background-image:url('images/roblox-overview-3.png');"></div>
-          <div class="row-img" style="background-image:url('images/roblox-overview-4.png');"></div>
-          <div class="row-img" style="background-image:url('images/roblox-overview-5.png');"></div>
-          <div class="row-img" style="background-image:url('images/roblox-overview-6.png');"></div>
-          <div class="row-img" style="background-image:url('images/roblox-overview-7.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-overview-1.png')" style="background-image:url('images/roblox-overview-1.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-overview-2.png')" style="background-image:url('images/roblox-overview-2.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-overview-3.png')" style="background-image:url('images/roblox-overview-3.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-overview-4.png')" style="background-image:url('images/roblox-overview-4.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-overview-5.png')" style="background-image:url('images/roblox-overview-5.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-overview-6.png')" style="background-image:url('images/roblox-overview-6.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-overview-7.png')" style="background-image:url('images/roblox-overview-7.png');"></div>
         </div>
       </div>
 
-      <!-- 第二排：互动装置 / 游戏玩法 5 张 -->
+      <!-- 第二排：互动装置 / 游戏玩法 5 张 (全加了放大功能) -->
       <div class="row-gallery">
         <div class="row-title">互动装置与玩法 · Interactions</div>
         <div class="row-strip">
-          <div class="row-img" style="background-image:url('images/roblox-interaction-1.png');"></div>
-          <div class="row-img" style="background-image:url('images/roblox-interaction-2.png');"></div>
-          <div class="row-img" style="background-image:url('images/roblox-interaction-3.png');"></div>
-          <div class="row-img" style="background-image:url('images/roblox-interaction-4.png');"></div>
-          <div class="row-img" style="background-image:url('images/roblox-interaction-5.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-interaction-1.png')" style="background-image:url('images/roblox-interaction-1.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-interaction-2.png')" style="background-image:url('images/roblox-interaction-2.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-interaction-3.png')" style="background-image:url('images/roblox-interaction-3.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-interaction-4.png')" style="background-image:url('images/roblox-interaction-4.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-interaction-5.png')" style="background-image:url('images/roblox-interaction-5.png');"></div>
         </div>
       </div>
 
-      <!-- 第三排：美术馆内部 3 张 -->
+      <!-- 第三排：美术馆内部 3 张 (全加了放大功能) -->
       <div class="row-gallery">
         <div class="row-title">美术馆内部空间 · Interior</div>
         <div class="row-strip">
-          <div class="row-img" style="background-image:url('images/roblox-interior-1.png');"></div>
-          <div class="row-img" style="background-image:url('images/roblox-interior-2.png');"></div>
-          <div class="row-img" style="background-image:url('images/roblox-interior-3.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-interior-1.png')" style="background-image:url('images/roblox-interior-1.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-interior-2.png')" style="background-image:url('images/roblox-interior-2.png');"></div>
+          <div class="row-img zoom-img" onclick="openImageModal('images/roblox-interior-3.png')" style="background-image:url('images/roblox-interior-3.png');"></div>
         </div>
       </div>
 
     </div>
   </template>
+
 
 
   <template id="m-op-douyin">
