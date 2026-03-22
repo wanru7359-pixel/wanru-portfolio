@@ -267,68 +267,80 @@
         
         <!-- 左列：Films -->
         <div class="card">
-          <div class="card-title">Films｜短片与短剧</div>
+          <div class="card-title" style="margin-bottom: 12px;">Films｜短片与短剧</div>
           <div class="card-body">
-            <div class="media-card" onclick="openModal('m-film-spring')">
+            
+            <!-- 1. 毕设短片：保留弹窗 -->
+            <div class="media-card" onclick="openModal('m-film-spring')" style="cursor: pointer; transition: transform .22s ease;">
               <div class="thumb" style="background-image:url('images/spring-poster.jpg');"></div>
               <div>
                 <div class="pill">Graduation Film</div>
-                <div class="card-title">《在春天来临之前》</div>
+                <div class="card-title">剧情短片《在春天来临之前》</div>
                 <div class="card-meta">Director / Writer / Editor</div>
-                <div class="card-body">点击查看：简介、海报/剧照、你负责的工作。</div>
+                <div class="card-body">点击查看：独立负责的毕业短片。透过墨水晕染的课桌缝隙，记录中国式青春里高考重压下的隐秘幻想与个体意识觉醒。</div>
               </div>
             </div>
 
             <div style="height:20px;"></div>
 
-            <div class="media-card" onclick="openModal('m-film-banxia')">
-              <div class="thumb" style="background-image:url('images/outofmind-poster.jpg');"></div>
-              <div>
-                <div class="pill">Short Film</div>
-                <div class="card-title">短片《心门》</div>
-                <div class="card-meta">Role (请替换)</div>
-                <div class="card-body">点击查看：该短片的详细说明。</div>
-              </div>
-            </div>
-
-            <div style="height:20px;"></div>
-
-            <div class="media-card" onclick="openModal('m-film-kaiji')">
-              <div class="thumb" style="background-image:url('images/shortdrama-action-cover-test-1.jpg');"></div>
-              <div>
-                <div class="pill">Vertical Series</div>
-                <div class="card-title">竖屏短剧《开机！学院派》</div>
-                <div class="card-meta">Editor / DMT</div>
-                <div class="card-body">点击查看：交付规范与技能点。</div>
-              </div>
-            </div>
-
-            <div style="height:20px;"></div>
-
-            <div class="media-card" onclick="openModal('m-film-xiyun')">
-              <div class="thumb" style="background-image:url('images/xiyun-screenshot-1.jpg');"></div>
-              <div>
-                <div class="pill">Culture Video</div>
-                <div class="card-title">文化短视频《戏韵》</div>
-                <div class="card-meta">Editor</div>
-                <div class="card-body">点击查看：作品定位、剪辑思路。</div>
-              </div>
-            </div>
-       
-            <div style="height:20px;"></div>
-
-            <div class="media-card" onclick="openModal('m-film-scripts')">
+            <!-- 2. 剧本集：保留弹窗 -->
+            <div class="media-card" onclick="openModal('m-film-scripts')" style="cursor: pointer; transition: transform .22s ease;">
               <div class="thumb" style="background-image:url('images/juben-fengmian.jpg');"></div>
               <div>
                 <div class="pill">Screenwriting</div>
                 <div class="card-title">剧本创作集</div>
                 <div class="card-meta">Writer / Concept</div>
-                <div class="card-body">点击查看：包含《釜中之豆》等剧本节选与题材介绍。</div>
+                <div class="card-body">点击查看：《釜中之豆》(科幻与算法规训) 及毕设短片剧本节选与导演阐述。</div>
+              </div>
+            </div>
+
+            <div style="height:20px;"></div>
+            
+            <!-- 3. 心门：保留弹窗 -->
+            <div class="media-card" onclick="openModal('m-film-banxia')" style="cursor: pointer; transition: transform .22s ease;">
+              <div class="thumb" style="background-image:url('images/outofmind-poster.jpg');"></div>
+              <div>
+                <div class="pill">Short Film</div>
+                <div class="card-title">短片《心门》</div>
+                <div class="card-meta">Director / Writer</div>
+                <div class="card-body">点击查看：以社会新闻为原型的女性自我救赎故事。</div>
+              </div>
+            </div>
+
+            <div style="height:20px;"></div>
+
+            <!-- 4. 开机学院派：取消跳转，直接展示干货 -->
+            <div class="media-card" style="cursor: default;">
+              <div class="thumb" style="background-image:url('images/shortdrama-action-cover-test-1.jpg');"></div>
+              <div>
+                <div class="pill">Vertical Series</div>
+                <div class="card-title">短剧《开机！学院派》</div>
+                <div class="card-meta">Editor / DMT</div>
+                <div class="card-body" style="margin-top: 4px; font-size: 11px;">
+                  负责多集正片剪辑、节奏把控，及全组 DMT（素材转码、合板备份与工业化交付规范管理）。
+                </div>
+              </div>
+            </div>
+
+            <div style="height:20px;"></div>
+
+            <!-- 5. 戏韵：取消跳转，直接展示干货 -->
+            <div class="media-card" style="cursor: default;">
+              <div class="thumb" style="background-image:url('images/xiyun-screenshot-1.jpg');"></div>
+              <div>
+                <div class="pill">Culture Video</div>
+                <div class="card-title">文化短视频《戏韵》</div>
+                <div class="card-meta">Editor</div>
+                <div class="card-body" style="margin-top: 4px; font-size: 11px;">
+                  参与大学工作室商业化项目，负责其中一集核心内容的粗剪与精剪包装。
+                </div>
               </div>
             </div>
             
           </div>
         </div>
+        <!-- 结束左列的 card -->
+
       
         <!-- 右列：Exhibitions -->
         <div class="card" style="height: 100%;">
