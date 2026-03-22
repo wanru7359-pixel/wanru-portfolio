@@ -595,110 +595,94 @@
     </div>
   </template>
 
+  <!-- 1. 毕设短片：在春天来临之前 -->
   <template id="m-film-spring">
-    <!-- 对应 spring-poster.jpg 作为弹窗横幅 -->
     <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/spring-poster.jpg');"></div></div>
     <div class="modal-content">
-      <div class="modal-h2">《在春天来临之前》 On the Eve of Spring</div>
+      <div class="modal-h2">剧情短片《在春天来临之前》 On the Eve of Spring</div>
       <div class="modal-role">Graduation Film · Director / Writer / Editor</div>
-      <div class="modal-p">这里放你的项目简介。</div>
-      <div class="modal-gallery">
-        <!-- 对应 spring-still 1 到 4 -->
-        <div class="g" style="background-image:url('images/spring-still-1.jpg');"></div>
-        <div class="g" style="background-image:url('images/spring-still-2.jpg');"></div>
-        <div class="g" style="background-image:url('images/spring-still-3.jpg');"></div>
-        <div class="g" style="background-image:url('images/spring-still-4.jpg');"></div>
+      
+      <div class="modal-p" style="margin-bottom: 12px; font-size: 13px;">
+        <strong>剧情梗概：</strong>高考前的最后一个冬天，课桌上一瓶偶然洒出的蓝色墨水，成为了江小满与杜川之间隐秘的连结。随着考期逼近，少男少女的心事在沉闷的自习室里悄然发酵。在这场无声的试探中，她将所有的幻想与未知的迷茫，都藏在了那片晕染开的蓝色星云里。
+      </div>
+      
+      <div class="modal-p" style="font-size: 13px;">
+        <strong>导演阐述：</strong>炎热的夏天、困倦的冬天与永恒的升学压力，这是属于中国高中生特有的集体记忆。在高考这座大山面前，青春被极度压缩，但年轻的生命依然在寻找自己的出路。主人公熬过冬天等待春天，但春天之后的人生又将走向何方？我想拍下这种重压之下依然坚韧、隐秘生长的青春痛感。
+      </div>
+
+      <div style="margin-top: 20px; font-size: 13px; font-weight: 600; color: #C7D2FF;">剧照 (点击查看大图)</div>
+      <div class="modal-gallery" style="margin-top: 10px;">
+        <div class="g zoom-img" onclick="openImageModal('images/spring-still-1.jpg')" style="background-image:url('images/spring-still-1.jpg'); position: relative; cursor: zoom-in;">
+            <div style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); padding: 4px; border-radius: 4px; color: white; font-size: 10px;">🔍 放大</div>
+        </div>
+        <div class="g zoom-img" onclick="openImageModal('images/spring-still-2.jpg')" style="background-image:url('images/spring-still-2.jpg'); position: relative; cursor: zoom-in;">
+            <div style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); padding: 4px; border-radius: 4px; color: white; font-size: 10px;">🔍 放大</div>
+        </div>
+        <div class="g zoom-img" onclick="openImageModal('images/spring-still-3.jpg')" style="background-image:url('images/spring-still-3.jpg'); position: relative; cursor: zoom-in;">
+            <div style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); padding: 4px; border-radius: 4px; color: white; font-size: 10px;">🔍 放大</div>
+        </div>
+        <div class="g zoom-img" onclick="openImageModal('images/spring-still-4.jpg')" style="background-image:url('images/spring-still-4.jpg'); position: relative; cursor: zoom-in;">
+            <div style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.6); padding: 4px; border-radius: 4px; color: white; font-size: 10px;">🔍 放大</div>
+        </div>
       </div>
     </div>
   </template>
 
-  <template id="m-film-banxia">
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/outofmind-1.jpg');"></div></div>
-    <div class="modal-content">
-      <div class="modal-h2">半夏短片项目</div>
-      <div class="modal-role">填写你的角色</div>
-      <div class="modal-p">这里填写关于半夏短片的说明文字。</div>
-      <div class="modal-gallery">
-        <div class="g" style="background-image:url('images/outofmind-2.jpg');"></div>
-        <div class="g" style="background-image:url('images/outofmind-3.jpg');"></div>
-        <div class="g" style="background-image:url('images/outofmind-4.jpg');"></div>
-        <div class="g" style="background-image:url('images/outofmind-5.jpg');"></div>
-      </div>
-    </div>
-  </template>
-
-  <template id="m-film-kaiji">
-    <!-- 对应 shortdrama-action-cover.jpg 作为弹窗横幅 -->
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/shortdrama-action-cover-test-1.jpg');"></div></div>
-    <div class="modal-content">
-      <div class="modal-h2">竖屏短剧《开机！学院派》</div>
-      <div class="modal-role">Editor / DMT</div>
-      <ul class="modal-ul">
-        <li>剪辑：正片剪辑、节奏控制、版本管理</li>
-        <li>DMT：转码合板、素材备份、交付规范</li>
-      </ul>
-      <div class="modal-gallery">
-        <!-- 对应 shortdrama-action-still 1 到 3 -->
-        <div class="g" style="background-image:url('images/shortdrama-action-still-1.jpg');"></div>
-        <div class="g" style="background-image:url('images/shortdrama-action-still-2.jpg');"></div>
-        <div class="g" style="background-image:url('images/shortdrama-action-still-3.jpg');"></div>
-      </div>
-    </div>
-  </template>
-
-  <template id="m-film-xiyun">
-    <!-- 弹窗大图使用 xiyun-screenshot-1.jpg -->
-    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/xiyun-screenshot-1.jpg');"></div></div>
-    <div class="modal-content">
-      <div class="modal-h2">文化短视频《戏韵》</div>
-      <div class="modal-role">Editor</div>
-      <div class="modal-p">补充：项目背景、剪辑思路、入围信息。</div>
-      <div class="modal-gallery">
-        <!-- 对应 xiyun-screenshot 2 到 4 -->
-        <div class="g" style="background-image:url('images/xiyun-screenshot-2.jpg');"></div>
-        <div class="g" style="background-image:url('images/xiyun-screenshot-3.jpg');"></div>
-        <div class="g" style="background-image:url('images/xiyun-screenshot-4.jpg');"></div>
-      </div>
-    </div>
-  </template>
-
-   <template id="m-film-scripts">
+  <!-- 2. 剧本集 -->
+  <template id="m-film-scripts">
     <div class="modal-hero">
       <div class="modal-hero-img" style="background-image:url('images/juben-fengmian.jpg');"></div>
     </div>
     <div class="modal-content">
       <div class="modal-h2">剧本创作集锦</div>
       <div class="modal-role">Screenwriter</div>
-      <div class="modal-p">
-        主要展示两部代表性剧本：一部原创科幻短片剧本，以及毕业作品《在春天来临之前》的前期剧本版本。
-      </div>
+      <div class="modal-p">这里展示两部代表性剧本：科幻短片《釜中之豆》，以及毕设作品《在春天来临之前》。</div>
 
       <div style="margin-top:20px; display:flex; flex-direction:column; gap:24px;">
         <!-- 科幻剧本 -->
         <div>
-          <img src="images/theBeaninthePot-2.jpg" style="width:100%; border-radius:12px; border:1px solid rgba(148,163,184,.20);">
+          <img onclick="openImageModal('images/theBeaninthePot-2.jpg')" src="images/theBeaninthePot-2.jpg" style="width:100%; border-radius:12px; border:1px solid rgba(148,163,184,.20); cursor: zoom-in;" class="zoom-img">
           <div style="margin-top:8px; font-size:13px; color:#C7B6FF; font-weight:600;">
-            《釜中之豆 / The Bean in the Pot》｜科幻短片剧本
+            《釜中之豆 / The Bean in the Pot》｜科幻短片剧本 (研究生阶段)
           </div>
-          <div style="font-size:13px; color:var(--muted2);">
-            2055 年，一家“年度最佳雇主”公司用健康手环、情绪监测和关怀话术，打造名为“透明动物园”的内部项目，对副总裁候选人的全部生理与情感数据进行采集。 表面上，这是为员工减压的福祉计划，实际上是为了训练出一位更稳定、更高效、没有倦怠和犹疑的 AI 版管理者。
-剧本以候选人 Elara 的视角展开，以“透明动物园”和《七步诗》的意象为核心隐喻：员工既是锅里被煮的豆子，也是烧豆秸的火，他们的情绪、焦虑和创造力被当作燃料，去孵化一个更“理性”、更可控的 AI 继任者
+          <div style="font-size:13px; color:var(--muted2); margin-top:4px;">
+            <strong>核心隐喻：</strong>灵感来源于曹植的《七步诗》与当下的数据监控资本主义。故事设定在 2055 年，企业通过名为“透明动物园”的项目采集候选人的情绪与生理数据。员工的情绪、焦虑与创造力如同锅底被燃烧的豆萁，成为孵化更完美 AI 继任者的燃料。<br>
+            <strong>创作探讨：</strong>剧本采用留白美学，探讨在算法规训的社会中，人类是否还有权利保留不被数据化的自我，以此反思隐私边界的消亡。
           </div>
         </div>
 
         <!-- 毕设剧本 -->
         <div>
-          <img src="images/spring-script-2.jpg" style="width:100%; border-radius:12px; border:1px solid rgba(148,163,184,.20);">
+          <img onclick="openImageModal('images/spring-script-2.jpg')" src="images/spring-script-2.jpg" style="width:100%; border-radius:12px; border:1px solid rgba(148,163,184,.20); cursor: zoom-in;" class="zoom-img">
           <div style="margin-top:8px; font-size:13px; color:#C7B6FF; font-weight:600;">
-            《在春天来临之前》剧本 · 毕设短片前期稿
+            《在春天来临之前》｜毕设短片前期剧本 (本科阶段)
           </div>
-          <div style="font-size:13px; color:var(--muted2);">
-            毕设短片《在春天来临之前》的剧本，从人物小传到分场纲要、对白再到拍摄脚本全部由我独立完成，多轮修改后进入拍摄阶段。网页上展示的是该短片的文学剧本。
+          <div style="font-size:13px; color:var(--muted2); margin-top:4px;">
+            从人物小传、分场纲要、对白到拍摄脚本，均由个人独立撰写。剧本历经多轮打磨，为后续的拍摄与现场调度奠定了文学基础。
           </div>
         </div>
       </div>
     </div>
   </template>
+
+  <!-- 3. 短片心门 -->
+  <template id="m-film-banxia">
+    <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/outofmind-1.jpg');"></div></div>
+    <div class="modal-content">
+      <div class="modal-h2">短片《心门》</div>
+      <div class="modal-role">Director / Writer</div>
+      <div class="modal-p">
+        这是我基于真实社会新闻“李星星事件”改编拍摄的短片。它确立了我最初用镜头介入现实议题、探讨女性困境与自我救赎的创作初心，并凭借该片获得了电影节奖项。
+      </div>
+      <div class="modal-gallery" style="margin-top: 16px;">
+        <div class="g zoom-img" onclick="openImageModal('images/outofmind-2.jpg')" style="background-image:url('images/outofmind-2.jpg'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/outofmind-3.jpg')" style="background-image:url('images/outofmind-3.jpg'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/outofmind-4.jpg')" style="background-image:url('images/outofmind-4.jpg'); position: relative; cursor: zoom-in;"></div>
+        <div class="g zoom-img" onclick="openImageModal('images/outofmind-5.jpg')" style="background-image:url('images/outofmind-5.jpg'); position: relative; cursor: zoom-in;"></div>
+      </div>
+    </div>
+  </template>
+
 
   <template id="m-ex-buddha">
     <div class="modal-hero"><div class="modal-hero-img" style="background-image:url('images/buddha-1.jpg');"></div></div>
