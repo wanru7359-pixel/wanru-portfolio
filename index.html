@@ -202,45 +202,31 @@
     <header>
       <!-- 左侧：包含个人照片和文字介绍 -->
       <div style="display:flex; align-items:center; gap:20px;">
-        <!-- 发光头像 -->
         <div style="width:150px; height:150px; border-radius:50%; overflow:hidden; border:2px solid rgba(167,139,250,.4); box-shadow:0 0 20px rgba(167,139,250,.2); flex-shrink:0;">
+          <!-- 对应你的个人照片命名 myphoto.jpg -->
           <img src="images/myphoto.jpg" alt="Chen Wanru" style="width:100%; height:100%; object-fit:cover;">
         </div>
         
-        <!-- 右侧文字区 -->
         <div style="display: flex; flex-direction: column; justify-content: center;">
-          <div class="hero-title" style="margin-bottom: 6px;">陈婉如 | Wanru Chen</div>
+          <div class="hero-title">Chen Wanru 陈婉如</div>
+          <p class="hero-meta" style="margin-bottom: 8px;">Based in Beijing / Hong Kong</p>
           
-          <p class="hero-meta" style="margin-bottom: 12px; color: var(--purple); font-weight: 600;">
-            Based in Beijing / Hong Kong
+          <!-- 恢复了和原版一致的小字号，不让它喧宾夺主 -->
+          <p class="hero-sub" style="margin-bottom: 4px;">
+            涵盖影视编导、项目统筹、线下策展与社交媒体运营
+          </p>
+          <p class="hero-sub" style="font-size: 0.9em; opacity: 0.8; margin-bottom: 12px;">
+            Bridging storytelling across films, series, exhibitions, and social feeds.
           </p>
 
-          <!-- 中英双语 Slogan -->
-          <div style="font-size: 1.05rem; color: var(--text); margin-bottom: 4px; line-height: 1.4;">
-            涵盖影视编导、项目统筹、线下策展与社交媒体运营
+          <!-- 把联系方式紧凑地塞在底部，确保不会把这块撑得比头像高 -->
+          <div style="display: flex; gap: 16px; align-items: center; font-size: 13px; color: var(--text);">
+            <span style="display: flex; align-items: center; gap: 4px;">📱 +86 184-0163-7359</span>
+            <span style="opacity: 0.3;">|</span>
+            <span style="display: flex; align-items: center; gap: 4px;">✉️ <a href="mailto:wanru7359@gmail.com" style="color: inherit; text-decoration: none;">wanru7359@gmail.com</a></span>
           </div>
-          <div style="font-size: 0.95rem; color: var(--muted2); margin-bottom: 20px; line-height: 1.4;">
-            Bridging storytelling across films, series, exhibitions, and social feeds.
-          </div>
-
-          <!-- 新增的联系方式模块 -->
-          <div style="display: flex; gap: 20px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">
-            <!-- 电话 -->
-            <div style="display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--text);">
-              <span style="font-size: 16px;">📱</span> 
-              <span style="opacity: 0.9;">+86 184-0163-7359</span>
-            </div>
-            <!-- 邮箱 -->
-            <div style="display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--text);">
-              <span style="font-size: 16px;">✉️</span> 
-              <a href="mailto:wanru7359@gmail.com" style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1px; transition: border-color 0.2s;" onmouseover="this.style.borderColor='var(--purple)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)'">wanru7359@gmail.com</a>
-            </div>
-          </div>
-          
         </div>
       </div>
-    </header>
-
 
       <!-- 右侧：About Me 玻璃卡片 -->
       <div class="glass about-card">
@@ -261,6 +247,7 @@
         </div>
       </div>
     </header>
+
 
     <!-- EDUCATION & RESEARCH -->
     <section>
