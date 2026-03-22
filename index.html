@@ -29,16 +29,27 @@
       font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;
       color:var(--text);
       line-height:1.65;
+      /* 设置一个超大的背景尺寸，方便移动 */
       background:
         radial-gradient(1000px 650px at 15% 10%, rgba(124,58,237,.16), transparent 60%),
         radial-gradient(900px 600px at 85% 0%, rgba(56,189,248,.12), transparent 55%),
         radial-gradient(950px 720px at 50% 100%, rgba(236,72,153,.10), transparent 60%),
         linear-gradient(180deg, var(--bg1) 0%, var(--bg0) 65%, #000 100%);
+      background-size: 200% 200%;
       -webkit-font-smoothing:antialiased;
       overflow-x:hidden;
+      /* 给背景加上缓慢的极光呼吸动画 */
+      animation: auroraBreathe 20s ease infinite;
     }
 
-    /* 宇宙感星光点阵 */
+    @keyframes auroraBreathe {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 100% 100%; }
+      100% { background-position: 0% 0%; }
+    }
+
+
+    /* 升级版：动态星光点阵 */
     .bg-grid{
       position:fixed; inset:0;
       background-image: radial-gradient(rgba(255,255,255,.15) 1.5px, transparent 1.5px);
@@ -46,7 +57,15 @@
       opacity:.8;
       pointer-events:none;
       z-index:-3;
+      /* 新增动画效果 */
+      animation: bgScroll 60s linear infinite;
     }
+    
+    @keyframes bgScroll {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-32px); } /* 这里的 32px 对应上面的 background-size */
+    }
+
     .bg-vignette{
       position:fixed; inset:-40px;
       background: radial-gradient(circle at 50% 50%, transparent 35%, rgba(0,0,0,.65) 80%);
@@ -316,7 +335,7 @@
                 <div class="pill">Vertical Series</div>
                 <div class="card-title">短剧《开机！学院派》</div>
                 <div class="card-meta">Editor / DMT</div>
-                <div class="card-body" style="margin-top: 4px; font-size: 11px;">
+                <div class="card-body" style="margin-top: 4px; font-size: 13px;">
                   负责多集正片剪辑、节奏把控，及全组 DMT（素材转码、合板备份与工业化交付规范管理）。
                 </div>
               </div>
@@ -331,7 +350,7 @@
                 <div class="pill">Culture Video</div>
                 <div class="card-title">文化短视频《戏韵》</div>
                 <div class="card-meta">Editor</div>
-                <div class="card-body" style="margin-top: 4px; font-size: 11px;">
+                <div class="card-body" style="margin-top: 4px; font-size: 13px;">
                   参与大学工作室商业化项目，负责其中一集核心内容的粗剪与精剪包装。
                 </div>
               </div>
